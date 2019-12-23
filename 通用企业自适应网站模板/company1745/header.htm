@@ -1,0 +1,69 @@
+<!-- nav -->
+		<nav class="navbar navbar-default navbar-fixed-top" style="position:relative;" >
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">通用企业自适应网站模板</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="{ms:global.host/}" class="navbar-brand text-center"><img src="http://cdn.mingsoft.net/global/images/MStore.png" class="img-responsive" /></a>
+					<!-- logo end -->
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="oen">
+							<a href="{ms:global.host/}">网站首页</a>
+						</li>
+						<li class="oen dropdown">
+							<a href="{ms:global.url/}/53/index.html" data-toggle="dropdown" data-submenu="">关于我们<span class="caret"></span></a>
+							<ul class="two dropdown-menu">
+								{ms:channel typeid=53}
+								<li>
+									<a  href="[field.typelink/]">[field.typetitle/]</a>
+								</li>
+								{/ms:channel}
+							</ul>
+						</li>
+						<li class="oen dropdown">
+							<a href="{ms:global.url/}/59/index.html" data-toggle="dropdown" data-submenu="">企业新闻<span class="caret"></span></a>
+							<ul class="two dropdown-menu">
+								{ms:channel typeid=59}
+								<li>
+									<a href="[field.typelink/]">[field.typetitle/]</a>
+								</li>
+								{/ms:channel}
+							</ul>
+						</li>
+						<li class="oen dropdown">
+							<a href="{ms:global.url/}/106/index.html" data-toggle="dropdown" data-submenu="">产品中心<span class="caret"></span></a>
+							<ul class="two dropdown-menu">
+								{ms:channel typeid=106}
+								<li>
+									<a href="[field.typelink/]">[field.typetitle/]</a>
+								</li>
+								{/ms:channel}
+							</ul>
+						</li>
+						<li class="oen">
+							<a href="{ms:global.url/}/19/141/index.html	">联系我们</a>
+						</li>
+						<li class="oen dropdown">
+							<a href="{ms:global.url/}/61/index.html" data-toggle="dropdown" data-submenu="">客户案例<span class="caret"></span></a>
+							<ul class="two dropdown-menu">
+								{ms:channel typeid=61}
+								<li>
+									<a href="[field.typelink/]">[field.typetitle/]</a>
+								</li>
+								{/ms:channel}
+							</ul>
+						</li>
+					</ul>
+					<!--<div class="navbar-right user-panel">
+						<script src="{ms:globalskin.url/}/js/index.js"></script>
+					</div>-->
+				</div>
+			</div>
+		</nav>
+		

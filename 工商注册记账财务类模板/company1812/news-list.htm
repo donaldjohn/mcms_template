@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+	{ms:include filename=head-file.htm/}
+	<body>
+	{ms:include filename=head.htm/}
+	{ms:include filename=menu.htm/}
+    <div class="product sub_pro">
+        <!--left-->
+        <!--left end-->
+        <div class="product03">
+            <div class="content_com_title">
+                <h2>
+					{ms:field.typetitle/}
+                </h2>
+                <div class="bread">当前位置：
+					<a href='{ms:global.host/}'>主页</a>>
+					<a href='{ms:field.typelink/}'>{ms:field.typetitle/}</a>
+				</div>
+            </div>
+            <div class="content">
+                <ul class="news">
+                {ms:arclist size=6 ispaging=true}
+                    <li>
+                        <a href="[field.link/]" title="[field.title/]" class="pg-color">
+                           	 [field.title/]
+                        </a>
+                        <span>
+                            [field.date fmt=yyyy-MM-dd/]
+                        </span>
+                    </li>
+                    <p>
+                        [field.descrip/]
+                    </p>
+                 {/ms:arclist}   
+                </ul>
+                <div class="pagess">
+                    <ul>
+                        <li><a href="{ms:page.index/}">首页</a></li>
+                        <li><a href='{ms:page.pre/}'>上一页</a></li>
+                        <li><a href='{ms:page.next/}'>下一页</a></li>
+                        <li><a href='{ms:page.last/}'>末页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+     {ms:include filename=footer.htm/}
+    </body>
+</html>

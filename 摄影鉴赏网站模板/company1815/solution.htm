@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+{ms:include filename=head-file.htm/}
+<body>
+	{ms:include filename=head.htm/}
+	<div class="nbanner" style="display: none;"></div>
+	<link rel="stylesheet" type="text/css" href="{ms:globalskin.url/}css/fancybox.css">
+	<!-- 内容开始 -->
+	<div class="n-back-0">
+		<div class="kwidth">
+			{ms:include filename=nav-menu.htm/}
+			<!-- 左侧内容 -->
+			<div class="kwidth">
+				<div class="content_left fl wow slideInUp" data-wow-delay="0.1s">
+					<a class="ABOUT" name="ABOUT"></a> 
+					{ms:arclist typeid=61 size=1}
+					<div class="sector_content n-back-1 mb20">
+						<div class="sector_head">
+							<h3>[field.title/]</h3>
+						</div>
+						<div class="detail-content">[field.content/]</div>
+					</div>
+					{/ms:arclist} 
+					<a class="sheyingjiqiao" name="sheyingjiqiao"></a>
+					<div class="sector_content n-back-1 mb20 sheyingjiqiao">
+						<div class="sector_head">
+							<h3 id="w">
+								新闻<a data-i="1" class="more-small fr" href="{ms:global.url/}/62/index.html">更多></a>
+							</h3>
+						</div>
+						<div class="detail-content">
+							<ul class="wul105 lpic">
+								{ms:arclist typeid=62 size=3}
+								<li>
+									<a href="[field.link/]">
+										<img src="{ms:global.host/}[field.litpic/]" alt="[field.keyword/]" />
+									</a>
+									<h5>
+										<a href="[field.link/]">[field.title/]</a>
+									</h5>
+									<p>[field.descrip/]</p> <a href="[field.link/]" class="more-l"></a>
+								</li>
+								{/ms:arclist}
+							</ul>
+							<div class="hg10"></div>
+						</div>
+					</div>
+					<!-- /观点封面 -->
+					</*风采集合模板块*/> <a class="sheyingfengcai" name="sheyingfengcai"></a>
+					<div class="sector_content n-back-1 mb20 sheyingfengcai">
+						<div class="sector_head">
+							<h3 id="p">平面设计</h3>
+						</div>
+						<div class="detail-content">
+							<ul class="wul105 spic">
+								{ms:arclist typeid=59 size=4}
+								<li><a rel="example_group" href="{ms:global.host/}[field.litpic/]">
+										<img src="{ms:global.host/}[field.litpic/]" alt="[field.keyword/]" />
+									</a>
+									<p class="text-center">[field.title/]</p>
+								</li> 
+								{/ms:arclist}
+							</ul>
+							<div class="hg10"></div>
+						</div>
+					</div>
+					<!-- /风采封面 -->
+					</*团队集合模板块*/> <a class="chuangyituandui" name="chuangyituandui"></a>
+					<div class="sector_content n-back-1 mb20 chuangyituandui">
+						<div class="sector_head">
+							<h3 id="j">
+								专家研究院<a data-i="1" class="fr more-small"  href="{ms:global.url/}/115/index.html">更多></a>
+							</h3>
+						</div>
+						<div class="detail-content">
+							<div class="team_div_fm bd">
+								<ul class="wul105">
+									{ms:arclist size=3 typeid=115}
+									<li class="8">
+										<div class="detail">
+											<a><img src="{ms:global.host/}[field.litpic/]" /></a>
+											<h5 class="f18 pd-b10">[field.author/]</h5>
+											<span class="block">[field.source/]</span> 
+											<p class="f11 line-height22">[field.descrip/]</p>
+										</div>
+									</li> {/ms:arclist}
+								</ul>
+							</div>
+						</div>
+					</div>
+					</*合作伙伴集合模板块*/> <a class="Partner" name="Partner"></a>
+					<div class="sector_content n-back-1 mb20 Partner">
+						<div class="sector_head">
+							<h3 id="h">
+								客户案例<a data-i="1" class="fr more-small"  href="{ms:global.url/}/61/index.html">更多></a>
+							</h3>
+						</div>
+						<div class="detail-content">
+							<ul class="wul105 partnerpic">
+								{ms:arclist typeid=61 size=8}
+								<li>
+									<a><img  id="cw" src="{ms:global.host/}[field.litpic/]" alt="[field.keyword/]" /></a>
+									<p class="text-center">[field.title/]</p>
+								</li>
+								{/ms:arclist}	
+							</ul>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<!-- /合作伙伴封面 -->
+				</div>
+				<!-- /左侧内容 -->
+				<!-- 右侧内容 -->
+				<div class="content_right fr wow slideInUp" data-wow-delay="0.1s">
+					<div class="recommend_pro mb20 pd-b10 n-back-1">
+						<h3 class="f14 pd-l15 n-bor-b">资讯</h3>
+						<a href="{ms:global.url/}/62/index.html	"><img
+						   src="{ms:globalskin.url/}images/579b25caf121c.jpg" alt="关于我们的摄影" />
+						</a>
+						<p></p>
+					</div>
+					<div class="recommend_news n-back-1">
+						<h3 class="f14 pd-l15 n-bor-b">热门新闻</h3>
+						<ul>
+							{ms:arclist typeid=61 size=3}
+							<li>
+								<a href="[field.link/]">[field.title/]</a>
+								<span
+									class="f11 block pd-t5 pd-b5">[field.date fmt=yyyy-MM-dd/]
+								</span>
+								<p class="f11 line-height18">[field.descrip/]</p>
+							</li>
+						    {/ms:arclist}
+						</ul>
+					</div>
+				</div>
+				<!-- 右侧内容 -->
+				<div class="hg20"></div>
+			</div>
+		</div>
+	</div>
+	<!-- 内容开始 -->
+	<script type="text/javascript" src="{ms:globalskin.url/}/js/fancybox.js"></script>
+	<!-- footer -->
+	{ms:include filename=footer.htm/}
+	<!-- /footer -->
+</body>
+<script type="text/javascript">
+	//锚点
+	$(".subcate ul li").on(
+			"click",
+			function() {
+				$(this).find("a").addClass('on').parent("li").siblings().find(
+						"a").removeClass('on');
+				t = $(this).find("a").attr("_target");
+				_top = $("." + t).offset().top;
+				$("body,html").animate({
+					scrollTop : _top - 70
+				}, 800);
+			})
+	//点击放大
+	$("a[rel=example_group]").fancybox();
+</script>
+</html>

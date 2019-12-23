@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		{ms:include filename=headFile.htm/}
+	</head>
+	<!-- /end head -->
+	<body>
+		{ms:include filename=header.htm/}
+		<script type="text/javascript">
+			//<!CDATA[
+			var bodyBgs = [];
+			bodyBgs[0] = "/images/banner/s1.jpg";
+			bodyBgs[1] = "/images/banner/s2.jpg";
+			bodyBgs[2] = "/images/banner/s3.jpg";
+			bodyBgs[3] = "/images/banner/s4.jpg";
+			bodyBgs[4] = "/images/banner/s5.jpg";
+			var randomBgIndex = Math.round(Math.random() * 4);
+			//输出随机的背景图
+			document.write('<style>.banner{background:url('
+				images / 1831e da5dc8b409d93ff27040b95c81f.gif ') no-repeat 50% bottom}</style>');
+			//]]>
+		</script>
+		<section style="background:url({ms:globalskin.url/}/images/s1.jpg) no-repeat 50% bottom">
+			<div class="banner" style="height:160px;">
+			</div>
+		</section>
+		<div class="contact-us">
+			<div class="container">
+				<h3>
+					<span>HELLO.</span> What can we<br />
+					help you with?
+				</h3>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+						<span class="glyphicon glyphicon-map-marker col-xs-4"></span>
+						<dl class="col-xs-8">
+							<dt>联系我们</dt> {ms:arclist typeid=141}
+							<dd style="line-height: 13px;">[field.content/]</dd>
+							{/ms:arclist}
+						</dl>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<span class="glyphicon glyphicon-earphone col-xs-4"></span>
+						<dl class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+							<dt>联系电话</dt>
+							<dd>服务热线：400-40004000</dd>
+							<dd>手机：88888888888</dd>
+							<dd>传 真：400-40004000</dd>
+						</dl>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<span class="glyphicon glyphicon-envelope col-xs-4"></span>
+						<dl class="col-xs-8  ">
+							<dt>联系邮箱</dt>
+							<dd>联系邮箱：admin@admin.com</dd>
+							<dd>投诉邮 箱：admin@admin.com</dd>
+						</dl>
+					</div>
+					<div class="clearfix blank20"></div>
+					<div class="blank20"></div>
+				</div>
+			</div>
+			<div class="content-ditu" style="height:34.8em;">
+				<iframe src="http://cdn.mingsoft.net/global/map.htm?wmode=transparent&amp;wmode=transparent" id="ifrm" name="ifrm" width="100%" height="320" frameborder="0" scrolling="no" onload="document.all('ifrm').style.height=ifrm.document.body.scrollHeight+30;" style="height:812.8px;"></iframe>
+				<style type="text/css">
+					.iw_poi_title {
+						color: #CC5522;
+						font-size: 14px;
+						font-weight: bold;
+						overflow: hidden;
+						padding-right: 13px;
+						white-space: nowrap
+					}
+					
+					.iw_poi_content {
+						font: 12px arial, sans-serif;
+						overflow: visible;
+						padding-top: 4px;
+						white-space: -moz-pre-wrap;
+						word-wrap: break-word
+					}
+				</style>
+			</div>
+		</div>
+		<!-- /lianxi -->
+		<style type="text/css">
+			@media (max-width: 768px) {
+				.content-ditu {
+					height: 300px;
+				}
+			}
+		</style>
+		<div class="clearfix"></div>
+		{ms:include filename=footer.htm/} 
+		{ms:include filename=menu-left.htm/} 
+		{ms:include filename=menu-right.htm/}
+	</body>
+</html>

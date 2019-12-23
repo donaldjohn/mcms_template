@@ -1,0 +1,77 @@
+﻿<!DOCTYPE HTML><!-- 首席115 -->
+<html>
+{ms:include filename=head-file.htm/}
+<body class="met-navfixed">
+<!--[if lte IE 8]>
+	<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+	<p class="browserupgrade font-size-18">你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。</p>
+	</div>
+<![endif]-->
+{ms:include filename=head.htm/}
+<div class="met-banner " data-height='300||'>
+	<div class="slick-slide">
+		<img src="{ms:globalskin.url/}/images/1494496190_1.jpg" alt="res017" title="res017"  height="220px"/>
+		<div class="banner-text p-5">
+			<div class='container'>
+				<div class='banner-text-con'>
+					<div>
+						<h2 style="color:;">首席团队</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="met-column-nav  ">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 sidebar_tile">
+				<ul class="met-column-nav-ul">
+					<li class="dropdown">
+						<a href="#" title="首席团队" class="dropdown-toggle link active" data-toggle="dropdown">
+							首席团队 <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu bullet">
+							{ms:arclist typeid=115 }
+							<li><a href="[field.link/]"  title="[field.title/]">[field.title/]</a></li>
+							{/ms:arclist}		
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<section class="met-show animsition">
+	<div class="container">
+		<div class="row">
+			<ul class="team_list blocks-100 blocks-sm-2 blocks-md-3 blocks-xlg-3  clearfix">
+				{ms:arclist typeid=115}
+				<li class="team_item" >
+					<a href="[field.link/]" title="[field.title/]" target='_self'>
+						<div class="team_img">
+							<img src="{ms:global.host/}[field.litpic/]" alt="[field.title/]">
+						</div>
+						<div class="wrap">
+							<div>
+								<span class="h"></span>
+								<span class="v"></span>
+							</div>
+						</div>
+					</a>
+					<div class="team_info">
+						<p class="title">[field.title/]</p>
+						<p class="desc">[field.descrip/]</p>
+					</div>
+				</li>
+				{/ms:arclist}
+			</ul>
+			<div class="met-editor lazyload clearfix">
+				<div></div>
+			</div>
+		</div>
+	</div>
+</section>
+{ms:include filename=footer.htm/}
+</body>
+</html>

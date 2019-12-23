@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML>
+<html>
+{ms:include filename=head-file.htm/}
+<body class="met-navfixed">
+<!--[if lte IE 8]>
+	<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+	<p class="browserupgrade font-size-18">你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。</p>
+	</div>
+<![endif]-->
+{ms:include filename=head.htm/}
+<div class="met-banner " data-height='300||'>
+	<div class="slick-slide">
+		<img class="cover-image" src="{ms:globalskin.url/}/images/1494496190_1.jpg">
+		<div class="banner-text p-5">
+			<div class='container'>
+				<div class='banner-text-con'>
+					<div>
+						<h1 style="color:;">项目案例</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="met-column-nav product-search-body bordernone">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 sidebar_tile">
+				<ul class="met-column-nav-ul">
+					<li><a href="{ms:global.url/}/106/index.html" class="link"  title="全部">全部</a></li>
+					{ms:channel typeid=106 class=active}
+					<li>
+						<a href="[field.typelink/]" title="[field.typetitle/]" class="link [field.class/]">[field.typetitle/]</a>
+					</li>
+					{/ms:channel}
+				</ul>
+			</div>
+			<div class="col-md-3 product_search ">
+				<form method="get" action="">
+					<input type="hidden" name="search" value="search">
+					<input type="hidden" name="lang" value="cn">
+					<input type="hidden" name="class1" value="3">
+					<div class="form-group">
+						<div class="input-search">
+							<button type="button" class="input-search-btn">
+								<i class="icon wb-search" aria-hidden="true"></i>
+							</button>
+							<input type="text" class="form-control" name="content" value="" placeholder="Search">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="met-product animsition type-1">
+	<div class="container">
+        <div class='row'>
+            <ul class="blocks-2 blocks-sm-2 blocks-md-4 blocks-xlg-4  met-page-ajax met-grid" id="met-grid" data-scale='0.625'>
+				{ms:arclist titlelen=45}
+				<li class=" shown">
+					<div class="widget widget-shadow">
+						<figure class="widget-header cover">
+							<a href="[field.link/]" title="[field.title/]" target='_self'>
+								<div class="mask">
+								</div>
+								<img class="cover-image" src="{ms:global.host/}[field.litpic/]" alt="[field.typename/]" style='height:200px;'>
+							</a>
+						</figure>
+						<h4 class="widget-title">
+							<a href="[field.link/]" title="[field.title/]" target='_self'>[field.title/]</a>
+							<p></p>
+						</h4>
+					</div>
+				</li>
+				{/ms:arclist}
+            </ul>
+        </div>
+	</div>
+</div>
+{ms:include filename=footer.htm/}
+</body>
+</html>

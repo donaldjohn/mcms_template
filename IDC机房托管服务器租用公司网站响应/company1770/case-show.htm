@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		{ms:include filename=headFile.htm/}
+	</head>
+	<body>
+		{ms:include filename=header.htm/}
+		<div class="banner2">
+			<div class="container">
+				<h1>客户对我们的评价</h1>
+				<p></p>
+			</div>
+		</div>
+		<script>
+			//<!CDATA[
+			var bodyBgs = [];
+			bodyBgs[0] = "{ms:globalskin.url/}/images/s1.jpg";
+			bodyBgs[1] = "{ms:globalskin.url/}/images/s2.jpg";
+			bodyBgs[2] = "{ms:globalskin.url/}/images/s3.jpg";
+			bodyBgs[3] = "{ms:globalskin.url/}/images/s4.jpg";
+			bodyBgs[4] = "{ms:globalskin.url/}/images/s5.jpg";
+			var randomBgIndex = Math.round(Math.random() * 4);
+			//输出随机的背景图
+			document.write('<style>.banner{background:url(' + bodyBgs[randomBgIndex] + ') no-repeat 50% bottom}</style>');
+			//]]>
+		</script>
+		<!-- 面包屑导航开始 -->
+		<div class="mianbao">
+			<div class="container">
+				<a title="主页" href="{ms:global.host/}">主页</a>
+				&gt;&gt;
+				<a title="{ms:field.typetitle/}" href="{ms:field.typelink/}">{ms:field.typetitle/}</a>
+			</div>
+		</div>
+		<!-- 面包屑导航结束 -->
+		<div class="box2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9 box2-left list-container">
+						<!-- 页面标题开始 -->
+						<div class="title">
+							<h3><a>{ms:field.title/}</small></a></h3>
+							<p></p>
+							<span>——</span>
+						</div>
+						<!-- 页面标题结束 -->
+						<hr class="featurette-divider">
+						<!-- 中部开始 -->
+						<div class="container2">
+							<!--用于打印和文字放大-->
+							<div class="content_tools_box">
+								<p class="content_tools">
+									<a href="javascript:CallPrint('print');">打印本文</a> &nbsp; &nbsp; &nbsp;
+									<a href="javascript:doZoom(14)">小</a>&nbsp; &nbsp;
+									<a href="javascript:doZoom(18)">中</a>&nbsp; &nbsp;
+									<a href="javascript:doZoom(20)">大</a>
+								</p>
+								<div class="clearfix"></div>
+								<script src="{ms:globalskin.url/}/js/c_tool_3.js" type="text/javascript"></script>
+							</div>
+							<!--/用于打印和文字放大-->
+							<!-- 正文 -->
+							<div class="lead" id="print">
+								<p><span style="color: rgb(51, 51, 51); font-family: arial, 宋体, sans-serif; font-size: 14px; line-height: 24px; text-indent: 28px; background-color: rgb(255, 255, 255);">嗨，大家好！你已经解决了我在任何时间的问题！高效服务和客户服务是首屈一指的！又名灯灯，生于广州，祖籍广东揭西灰寨。1991年毕业于广州美术学院附中，因成绩优异被保送进广州美术学院版画系。1992年底赴美国留学，在美国加州州立大学波莫那分校艺术系深造，1997年回国，成为专业画家。作品多次参加国内外画展并获得奖励。曾在中国广州、香港及美国洛杉矶举办个人画展。1999年考入广州美术学院国画系攻读硕士学位，2002年获硕士学位。现为广州美术学院国画系教师。其丈夫是泳坛名将谢旭峰。</span></p>
+								<p><span style="color: rgb(51, 51, 51); font-family: arial, 宋体, sans-serif; font-size: 14px; line-height: 24px; text-indent: 28px; background-color: rgb(255, 255, 255);">出版画册：《杨缨的黑白世界》、《杨缨油画辑》、《杨缨彩墨世界》、《二十一世纪优秀艺术家画集——杨缨》、《透明的风——杨缨国画新作集》，2002年国画作品《迷》入选广东省国画大展，2003年油画作品《仿佛是昨天》入选广东省油画大展，2004年绢画作品《暗恋的季节》入选广东省首届新青年画展及第十届广东省美术作品展，2005年绢画作品《凉夏》入选广东省国画大展，2005年十月广州三彩画廊举办<<花语·人语-</span>
+									<a target="_blank" href="http://baike.baidu.com/view/222945.htm" style="color: rgb(19, 110, 194); text-decoration: none; font-family: arial, 宋体, sans-serif; font-size: 14px; line-height: 24px; text-indent: 28px; white-space: normal; background-color: rgb(255, 255, 255);">林蓝</a><span style="color: rgb(51, 51, 51); font-family: arial, 宋体, sans-serif; font-size: 14px; line-height: 24px; text-indent: 28px; background-color: rgb(255, 255, 255);">、杨缨国画作品展>>，2006入选上海艺博会重大活动之一的“上海艺博会青年艺术家推介展”，2007年九月广州三彩画廊举办《透明的风——杨缨国画新作展》，2007年入选“重庆立场-中国当代艺术大展”。</span></p>
+							</div>
+							<div class="blank30"></div>
+							<!-- 上下页开始 -->
+							<div id="page">
+								<strong>上一篇</strong>
+								<a href="{ms:field.nextlink/}">{ms:field.nexttitle/}</a>
+								<div class="blank10"></div>
+								<strong>下一篇</strong>
+								<a href="{ms:field.prelink/}">{ms:field.pretitle/}</a>
+							</div>
+							<!-- 上下页结束 -->
+						</div>
+						<!-- /container2 -->
+						<!-- 相关文章开始 -->
+						<!-- 相关文章结束 -->
+						<div class="blank60"></div>
+					</div>
+					<!-- /col-sm-8 -->
+					<div class="col-md-3 box2-right hidden-sm hidden-xs">
+						<div class="right1">
+							<form name='search' action="#" method="post">
+								<div class="input-group">
+									<input type="text" name="keyword" class="form-control">
+									<span class="input-group-btn">
+										<button  name='button' type="button" class="btn btn-primary" >搜索</button>
+									</span>
+								</div>
+								<!-- /input-group -->
+							</form>
+						</div>
+						<!--只展开当前栏目所在一级栏目下的分类-->
+						{ms:include filename=menu-right.htm/}
+					</div>
+					<!-- col-sm-4 -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /box2 -->
+		<!-- 页底推荐图文产品开始 -->
+		{ms:include filename=menu-left.htm/}
+		<!-- 页底推荐图文产品结束 -->
+		{ms:include filename=footer.htm/}
+	</body>
+</html>

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		{ms:include filename=headFile.htm/}
+	</head>
+	<!-- /end head -->
+	<body>
+		{ms:include filename=header.htm/}
+		<script type="text/javascript">
+			//<!CDATA[
+			var bodyBgs = [];
+			bodyBgs[0] = "/images/banner/s1.jpg";
+			bodyBgs[1] = "/images/banner/s2.jpg";
+			bodyBgs[2] = "/images/banner/s3.jpg";
+			bodyBgs[3] = "/images/banner/s4.jpg";
+			bodyBgs[4] = "/images/banner/s5.jpg";
+			var randomBgIndex = Math.round(Math.random() * 4);
+			//输出随机的背景图
+			document.write('<style>.banner{background:url("
+				images / fb723d1cc221434aac59563ffb12cd28.gif ") no-repeat 50% bottom}</style>');
+			//]]>
+		</script>
+		<section style="background:url({ms:globalskin.url/}/images/s1.jpg) no-repeat 50% bottom">
+			<div class="banner" style="height:160px;">
+			</div>
+		</section>
+		<!-- 面包屑导航开始 -->
+		<div class="container ">
+			<nav class="sub_menu">
+				<ol class="breadcrumb"><i class="iconfont">&#xe711;</i>
+					<li>
+						<a href="{ms:global.host/}">网站首页</a>
+					</li>
+					<li>
+						<a href="{ms:field.typelink/}">{ms:field.typetitle/}</a>
+					</li>
+				</ol>
+			</nav>
+		</div>
+		<!--/sub_menu-->
+		<!-- 面包屑导航结束 -->
+		<!-- 页面标题开始 -->
+		<div class="title">
+			<h3 class="wow bounceInDown" data-wow-delay="0.5s"><a href="{ms:global.url/}/106/index.html">产品设计<small></small></a></h3>
+			<p class="wow bounceIn" data-wow-delay="0.5s"></p>
+			<span>——</span>
+		</div>
+		<!-- 页面标题结束 -->
+		<!-- 中部开始 -->
+		<div class="clearfix"></div>
+		<div class="container">
+			<div class="row">
+				<div class="clearfix"></div>
+				{ms:arclist typeid=51 size=10 ispaging=true}
+				<div class="col-lg-3 col-md-3">
+					<div class="dc-style-box">
+						<a href="[field.link/]" class="img-auto"><img alt="[field.title/]" src="{ms:global.host/}[field.litpic/]"  style="width:270px;height:153px;" class="img-responsive"/></a>
+						<div class="dc-style-inner">
+							<h5><a href="[field.link/]">[field.title/]</a></h5>
+							<span></span>
+						</div>
+					</div>
+				</div>
+				{/ms:arclist}
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="container">
+			<!-- 内容列表分页开始 -->
+			<nav>
+				<ul class="pagination">
+					<span class="active">
+						<ul>
+							<span style="padding-left: 30px;">
+								<a href="{ms:page.index/}">首页</a>
+							</span>
+							<span style="padding-left: 30px;">
+								<a href="{ms:page.pre/}">上一页</a>
+							</span>
+							<span style="padding-left: 30px;">
+								<a href="{ms:page.next/}">下一页</a>
+							</span>
+							<span style="padding-left: 30px;">
+								<a href="{ms:page.last/}">末页</a>
+							</span>
+							<span style="padding-left: 30px;">共<span>{ms:page.total/}</span>页</span>
+						</ul>
+					</span>
+				</ul>
+			</nav>
+			<!-- 内容列表分页结束 -->
+		</div>
+		</div>
+		<!-- /container-fluid -->
+		</div>
+		<!-- 中部结束 -->
+		<div class="clearfix"></div>
+		{ms:include filename=footer.htm/} 
+		{ms:include filename=menu-left.htm/} 
+		{ms:include filename=menu-right.htm/}
+	</body>
+</html>

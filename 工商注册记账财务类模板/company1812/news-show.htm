@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+	{ms:include filename=head-file.htm/}
+	<body>
+	{ms:include filename=head.htm/}
+    {ms:include filename=menu.htm/}
+    <!--notice end-->
+    <!-- banner -->
+    <!-- 图标导航 -->
+    <div class="product sub_pro">
+        <!--left-->
+        <!--left end-->
+        <div class="product03">
+            <div class="content_com_title">
+                <h2>
+					{ms:field.typetitle/}
+                </h2>
+                <div class="bread">当前位置：
+					<a href='{ms:global.host/}'>主页</a>>
+					<a href='{ms:field.typelink/}'>{ms:field.typetitle/}</a>
+				</div>
+            </div>
+            <div class="content">
+                <div class="view">
+                    <h1 class="view-title">
+                       {ms:field.title/}
+                    </h1>
+                    <div class="view-date">
+                        <span>
+                           	 发布时间：{ms:field.date fmt=yyyy-MM-dd/}
+                        </span>
+                    </div>
+                    <p>
+                        {ms:field.content/}
+                    </p>
+                </div>
+                <div class="page">
+                    <p>上一篇：<a href='{ms:field.prelink/}'>{ms:field.pretitle/} </a></p>
+                    <p>下一篇：<a href="{ms:field.nextlink/}">{ms:field.nexttitle/}</a></p>
+                    <a href="{ms:global.url/}/59/index.html" title="返回列表" class="back theme_color">
+                       	 返回列表
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    {ms:include filename=footer.htm/}
+    </body>
+</html>

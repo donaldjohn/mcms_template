@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html>
+	{ms:include filename=head-file.htm/}
+	<body>
+	{ms:include filename=head.htm/}
+	{ms:include filename=menu.htm/}
+		<style>
+		.product02 .product3 li img{
+			width: 100%;
+		}
+		</style>
+		<div class="product sub_pro">
+			<!--left-->
+			<div class="sub_pro01">
+				<div class="sub_pro02">
+					<div class="product07">
+						<b>{ms:field.typetitle/}</b>
+					</div>
+					<!--left nav-->
+					<div class="sidenav">
+						<ul>
+						{ms:channel typeid=61}
+							<li>
+								<a class="sidenava" href="[field.typelink/]">
+									<p>[field.typetitle/]</p>
+								</a>
+							</li>
+						{/ms:channel}	
+						</ul>
+					</div>
+				</div>
+				<div class="sub_lx">
+					<div class="sub_lx01">
+						<div>
+							<img src="{ms:globalskin.url/}images/sub_lx.jpg" alt="" width="192" height="91" /></div>
+						<div class="sub_lx02">
+							<ul>
+								<li style=" background:url({ms:globalskin.url/}images/subz01.jpg) no-repeat left 5px;">电话 : 4000-000-000</li>
+								<li style=" background:url({ms:globalskin.url/}images/subz02.jpg) no-repeat left 5px;">传真 : 010-88888888</li>
+								<li style=" background:url({ms:globalskin.url/}images/subz03.jpg) no-repeat left 5px;">邮箱 : 123456@qq.com</li>
+								<li style=" background:url({ms:globalskin.url/}images/subz04.jpg) no-repeat left 5px;">地址 : 江西省景德镇市</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--left end-->
+			<div class="product02">
+				<div class="content_com_title">
+					<h2>{ms:field.typetitle/}</h2>
+					<div class="bread">当前位置：
+						<a href='{ms:global.host/}'>主页</a>>
+						<a href='{ms:field.typelink/}'>{ms:field.typetitle/}</a>
+					</div>
+				</div>
+				<div class="content">
+					<ul class="product3">
+					{ms:arclist ispaging=true}
+						<li>
+							<div>
+								<a href="[field.link/]">
+									<img src="{ms:global.host/}[field.litpic/]"/></a>
+							</div>
+							<p>
+								<a href="[field.link/]" class="pg-color">[field.title/]</a></p>
+						</li>
+					{/ms:arclist}	
+					</ul>
+					<div class="pagess">
+						<ul>
+							<li><a href="{ms:page.index/}">首页</a></li>
+							<li class=""><a href="{ms:page.pre/}">上一页</a></li>
+							<li>当前页：{ms:page.cur/}</li>
+							<li><a href='{ms:page.next/}'>下一页</a></li>
+							<li><a href='{ms:page.last/}'>末页</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		{ms:include filename=footer.htm/}
+	</body>
+
+</html>

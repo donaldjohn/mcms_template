@@ -1,0 +1,306 @@
+﻿<html>
+	<html lang="zh-CN">
+
+	<head>
+		{ms:include filename=headFile.htm/}
+		<script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+		<script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.js"></script>
+		<link rel="stylesheet" href="http://cdn.mingsoft.net/plugins/AmazeUI/2.7.2/css/amazeui.min.css">
+		<link rel="stylesheet" href="http://cdn.mingsoft.net/plugins/AmazeUI/2.7.2/css/app.css">
+	</head>
+	<!-- /end head -->
+
+	<body>
+		{ms:include filename=header.htm/}
+		<!-- Banner Section -->
+		<div class="banner-section">
+			<!-- slider -->
+			<div class="slider" style="margin-top:-45px;" />
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" />
+			<!-- Indicators -->
+			<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+				<ul class="am-slides">
+					{ms:arclist typeid=100 size=3}
+					<li>
+						<div class="container">
+							<div class="carousel-caption">
+								<a class="btn btn-default" href="#" role="button">了解更多</a>
+								</p>
+							</div>
+						</div>
+						<img src="{ms:global.host/}[field.litpic/]" style="height:400px;" />
+					</li>
+					{/ms:arclist}
+				</ul>
+			</div>
+			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				<!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				<!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<!-- /.carousel -->
+		<!-- Large modal -->
+		</div>
+		<!-- /slider -->
+		</div>
+		<!-- / Banner Section -->
+		<!-- About Section -->
+		<div class="about-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-offset-2 col-md-8 img-auto">
+						<img src="{ms:globalskin.url/}/images/guanyu.jpg" class="img-responsive" alt="Doctor Team" data-bd-imgshare-binded="1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-offset-1 col-md-10">
+						<div class="about-whitebox">
+							<div class="row">
+								<div class="col-md-12">
+									<h1 class="heading-title"><a href="/demo/business-template/v400/about">关于我们</a></h1>
+									<h4 class="sub-title mb30">What we are and our history</h4>
+									<p>企业一般是指以盈利为目的，运用各种生产要素（土地、劳动力、资本、技术和企业家才能等），向市场提供商品或服务，实行自主经营、自负盈亏、独立核算的法人或其他社会经济组织。在商品经济范畴内，作为组织单元的多种模式之一，按照一定</p>
+									<div class="text-center">
+										<a href="{ms:global.url/}/53/index.html" class="btn btn-default">了解更多</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /About Section -->
+		<!-- Department Section -->
+		<div class="department-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1 class="heading-title"><a href="/demo/business-template/v400/news">企业新闻</a></h1>
+						<h4 class="sub-title mb60">LET SHARE VALUE RECORD ENTERPRISE DEVELOPMENT STEPS</h4>
+					</div>
+				</div>
+				<div class="row">
+					{ms:arclist typeid=59 size=6}
+					<div class="col-md-4 col-sm-6">
+						<div class="row">
+							<div class="col-md-3 col-sm-3 department-inner-icon">
+								<i class="iconfont" style="font-size: 4rem; color: #FFFFFF;">&#xe926;</i>
+							</div>
+							<div class="col-md-9 col-sm-9">
+								<h2><a href="[field.link/]" title="[field.title/]" target="_blank"><font style="color:;">[field.title/]</font></a></h2></div>
+							<div>
+								<p class="mb60" style="width:200px; white-space:nowrap;overflow:hidden;text-overflow:ellipsis; " />[field.descrip/]</p>
+							</div>
+						</div>
+					</div>
+					{/ms:arclist}
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<a href="{ms:global.url/}/59/index.html" class="btn btn-default">了解更多</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Department Section -->
+		<!-- Doctor Section -->
+		<div class="doctor-section">
+			<div class="container">
+				<div class="row">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h1 class="heading-title"><a href="{ms:global.url/}/61/index.html">案例展示</a></h1>
+							<h4 class="sub-title mb60">HAS BEEN FULL OF ENTHUSIASM TO MEET UNDERSTAND DESIGN YOU!</h4>
+						</div>
+					</div>
+				</div>
+				<div class="row dt-bottom">
+					<div class="col-md-9">
+						<!-- Tab panes -->
+						<div class="tab-content">
+							{ms:arclist typeid=61 size=1}
+							<div role="tabpanel" class="tab-pane active" id="dr1">
+								<div class="row">
+									<div class="col-md-4">
+										<img src="{ms:global.host/}[field.litpic/]" class="img-responsive" alt="" />
+									</div>
+									<div class="col-md-8">
+										<div class="dr-details">
+											<h2 class="mb0"><font style="color:;">[field.title/]</font></h2>
+											<h4 class="mb25">作为案例展示的说明</h4>
+											<p>[field.descrip/]</p>
+											<a href="[field.link/]" class="btn btn-default mr10">了解更多</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							{/ms:arclist}
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="dr-tabs-box">
+							<!-- Nav tabs -->
+							<ul class="nav dr-tab" role="tablist">
+								{ms:arclist typeid=61 size=3}
+								<li role="presentation" class="active">
+									<a href="[field.link/]">
+										<div class="dr-box">
+											<span class="dr-img"><img src="{ms:global.host/}[field.litpic/]"  style="width:64px;height:76px;"class="img-responsive" alt="" /></span>
+											<span class="dr-title"><font style="color:;">[field.title/]</font></span>
+										</div>
+									</a>
+								</li>
+								{/ms:arclist}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Doctor Section -->
+		<!-- Why-choose Section -->
+		<div class="why-choose-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-offset-1 col-md-10 text-center">
+						<h1 class="heading-title"><a href="{ms:global.url/}/53/133/index.html">网站优化</a></h1>
+						<h4 class="sub-title mb30">Here is our speciality</h4>
+						<p>我们成为服务行业首屈一指的品牌。自成立起即建立了高标准并始终坚持至今，这使得我们赢得了稳固的声誉。连续多年被客户评为最佳建站服务公司。 品牌及声誉既有助于我们吸引新客户和人才，又有助于我们保持现有客户...</p>
+					</div>
+				</div>
+				<div class="row">
+					{ms:arclist typeid=133 typeid=4}
+					<div class="col-md-3 col-sm-6">
+						<div class="why-choose-box">
+							<div class="why-icon-box" style="line-height: 0;" />
+							<span><i class="iconfont">&#xe73d;</i></span>
+						</div>
+						<div class="why-choose-content">
+							<div class="why-heading counter">[field.title/]</div>
+							<div class="why-sub-heading">
+								<a style="color:;" href="[field.link/]" title="优势四" target="_blank">
+									<font>[field.author/]</font>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				{/ms:arclist}
+			</div>
+			<div class="row" style="margin-bottom: 60px;">
+				<div class="col-md-3 col-sm-6">
+					<div class="why-choose-box">
+						<div class="why-icon-box">
+							<i class="iconfont">&#xe73d;</i>
+						</div>
+						<div class="why-choose-content">
+							<div class="why-heading counter">高效、科技领先</div>
+							<div class="why-sub-heading">
+								<a href="{ms:global.url/}/53/133/index.html" title="优势四" target="_blank">
+									<font>优势四</font>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="why-choose-box">
+						<div class="why-icon-box">
+							<i class="iconfont">&#xe73d;</i>
+						</div>
+						<div class="why-choose-content">
+							<div class="why-heading counter">市场占有率高</div>
+							<div class="why-sub-heading">
+								<a href="{ms:global.url/}/53/133/index.html" title="优势三" target="_blank">
+									<font>优势三</font>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="why-choose-box">
+						<div class="why-icon-box">
+							<i class="iconfont">&#xe73d;</i>
+						</div>
+						<div class="why-choose-content">
+							<div class="why-heading counter">投资回报比高</div>
+							<div class="why-sub-heading">
+								<a style="color:;" href="{ms:global.url/}/53/133/index.html" title="优势二" target="_blank">
+									<font>优势二</font>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="why-choose-box">
+						<div class="why-icon-box">
+							<i class="iconfont">&#xe73d;</i>
+						</div>
+						<div class="why-choose-content">
+							<div class="why-heading counter">创新的领先意识</div>
+							<div class="why-sub-heading">
+								<a style="color:;" href="{ms:global.url/}/53/133/index.html" title="优势一" target="_blank">
+									<font>优势一</font>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- /Why-choose Section -->
+		<!-- Blog Section -->
+		<div class="blog-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<h1 class="heading-title"><a href="{ms:global.url/}/53/134/index.html">网络营销</a></h1>
+								<h4 class="sub-title mb60">The network marketing training</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				{ms:arclist typeid=134 size=1}
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-3 col-sm-3">
+							<div class="blog-section-day">14</div>
+							<div class="blog-section-month">Tuesday-03</div>
+						</div>
+						<div class="col-md-9 col-sm-9">
+							<h2><a style="color:;" href="[field.link/]" title="[field.title/]" target="_blank" class="black"><font style="color:;">[field.title/]</font></a></h2>
+							<div class="blog-section-meta meta-box-tag">
+								<span class="meta-author">历程说明。。 </span>
+							</div>
+							<p>[field.descrip/]</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="blog-section-img img-auto" style="height:320px;">
+						<img src="{ms:global.host/}[field.litpic/]" style="height:320px;" class="img-responsive img-auto">
+					</div>
+				</div>
+				<div class="col-md-12 text-center mt50">
+					<a href="[field.link/]" class="btn btn-default">了解更多</a>
+				</div>
+				{/ms:arclist}
+			</div>
+		</div>
+		</div>
+		<!-- /Blog Section -->
+		<div class="clearfix"></div>
+		{ms:include filename=footer.htm/} {ms:include filename=menu-left.htm/} {ms:include filename=menu-right.htm/}
+	</body>
+
+	</html>

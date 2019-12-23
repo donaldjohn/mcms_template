@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML>
+<html>
+    {ms:include filename=head-file.htm/}
+    <body>
+        {ms:include filename=head.htm/}
+        <!--内容开始-->
+        <div class="allpage">
+            {ms:include filename=menu.htm/}
+            <!--页头结束-->
+            <!--文章列表开始-->
+            <div class="content">
+                <ul class="list-loop common_news" id="contentArea">
+                	{ms:arclist ispaging=true}	
+                    <li class="loop news2">
+                        <a href="[field.link/]" title="[field.title/]">
+                            <span>
+                               	[field.title/]
+                            </span>
+                            <span>
+                                [field.date fmt=yyyy-MM-dd/]
+                            </span>
+                        </a>
+                    </li>
+                    {/ms:arclist}
+                </ul>
+                <div class="pages">
+                    <li>
+                        <span class="pageinfo">
+                            	共 {ms:page.total/} 页/{ms:page.rcount/} 条记录
+                        </span>
+                    </li>
+                </div>
+            </div>
+            {ms:include filename=footer.htm/}
+        </div>
+        <!--内容结束-->
+    </body>
+</html>

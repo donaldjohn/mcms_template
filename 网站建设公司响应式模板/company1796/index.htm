@@ -1,0 +1,866 @@
+﻿<!DOCTYPE html>
+<html>
+	{ms:include filename=headFile.htm/}
+	<body>
+		<!-- nav -->
+		{ms:include filename=header.htm/}
+		<style type="text/css">
+			.carousel-caption h3,
+			.carousel-caption p {
+				color: #ffffff;
+			}
+			
+			.carousel-indicators li {
+				border: 1px solid #ffffff;
+			}
+			
+			.carousel-indicators .active {
+				border: 1px solid #0099ff;
+				background-color: #0099ff;
+			}
+			
+			.btn-primary {
+				color: #ffffff;
+				background-color: #0099ff;
+				border-color: #0099ff;
+			}
+		</style>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img class="first-slide" src="{ms:globalskin.url/}images/1464858626484.jpg" style="width: 100%;" alt=" ">
+				</div>
+				<div class="item">
+					<img class="first-slide" src="{ms:globalskin.url/}images/1464859625584.jpg" style="width: 100%;" alt="">
+				</div>
+				<div class="item">
+					<img class="first-slide" src="{ms:globalskin.url/}images/1464859633594.jpg" style="width: 100%;" alt="">
+				</div>
+			</div>
+			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left iconfont" aria-hidden="true">&#xe74f;</span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right iconfont" aria-hidden="true">&#xe74e;</span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<!-- /.carousel -->
+		<script src="{ms:globalskin.url/}js/jgestures.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				//手势右滑 回到上一个画面
+				$('#myCarousel').bind('swiperight swiperightup swiperightdown', function() {
+					$("#myCarousel").carousel('prev');
+				})
+				//手势左滑 进入下一个画面
+				$('#myCarousel').bind('swipeleft swipeleftup swipeleftdown', function() {
+					$("#myCarousel").carousel('next');
+				})
+			})
+		</script>
+		<!-- Large modal -->
+		<link href="{ms:globalskin.url/}css/owl.carousel.min.css" rel="stylesheet">
+		<link href="{ms:globalskin.url/}css/owl.theme.default.min.css" rel="stylesheet">
+		<link href="{ms:globalskin.url/}css/index.css" rel="stylesheet">
+		<!-- Page Wrapper -->
+		<div class="page-wrapper">
+			<!-- About -->
+			<section class="about-us sections section-padding">
+				<div class="container">
+					<header class="section-header text-center">
+						<h3 class="section-sub-title">THE STRENGTH OF BRAND INNOVATION SCIENCE AND TECHNOLOGY WILL NEVER STOP</h3>
+						<h2 class="section-title"><a href="	{ms:global.url/}/93/index.html">关于我们</a></h2>
+						<span class="line"></span> {ms:arclist typeid=93 size=1}
+						<p>[field.descrip/]</p>
+						{/ms:arclist}
+					</header>
+					<div class="our-services-carousel owl-carousel owl-theme">
+						{ms:arclist typeid=93 size=6}
+						<div class="service-item">
+							<h3 class="title"><a href="[field.link/]">[field.title/]</a></h3>
+							<p style="overflow: hidden;text-overflow: ellipsis;-webkit-box-orient: vertical;display: -webkit-box;-webkit-line-clamp: 3;-moz-appearance:2;">[field.descrip/]</p>
+							<a href="[field.link/]" class="btn btn-primary">了解更多</a>
+						</div>
+						{/ms:arclist}
+					</div>
+					<div class="our-team our-team-1">
+						<div class="row">
+							{ms:arclist typeid=106 size=4}
+							<div class="col-xs-6 col-md-3 col-team-member">
+								<div class="team-member">
+									<img src="{ms:global.host/}[field.litpic/]" alt="[field.title/]" style="height: 300px;">
+									<div class="overlay">
+										<div class="member-info">
+											<h3 class="title"><a style="color:;" href="[field.link/]" title="[field.title/]" target="_blank"><font style="color:;">[field.title/]</font></a></h3>
+											<p></p>
+										</div>
+										<div class="social-media">
+											<a href="[field.link/]"><i class="fa fa-flickr"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							{/ms:arclist}
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Portfolio -->
+			<section class="our-portfolio our-portfolio-1 sections">
+				<div class="container">
+					<header class="section-header text-center">
+						<h3 class="section-sub-title">FOCUS ON WEB DESIGN BRAND POSITIONING HELP YOU REALIZE THE VALUE OF INTERNET BRAND</h3>
+						<h2 class="section-title"><a href="{ms:global.url/}/106/index.html">产品中心</a></h2>
+						<span class="line"></span> {ms:arclist typeid=106 size=1}
+						<p>[field.descrip/]</p>
+						{/ms:arclist}
+					</header>
+				</div>
+				<div class="portfolio-items-container row no-padding">
+					{ms:arclist typeid=106 size=4}
+					<div class="col-xs-6 col-lg-3 portfolio-post web-design branding">
+						<article class="portfolio-post-item">
+							<img src="[field.litpic/]" alt="[field.title/]" style="height: 303px;">
+							<div class="portfolio-content-wrapper">
+								<div class="portfolio-content">
+									<h3 class="portfolio-title"><a href="[field.link/]"><font style="color:;">[field.title/]</font></a></h3>
+									<span class="portfolio-cat"><a href="[field.typelink/]">[field.typename/]</a> / [field.date fmt=yyyy-MM-dd/]</span>
+								</div>
+							</div>
+						</article>
+					</div>
+					{/ms:arclist}
+				</div>
+			</section>
+			<!-- Counter -->
+			<section class="counter counter-1 sections">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-6 col-sm-3">
+							<div class="counter-content text-center">
+								<h3 class="counter-digit "><span data-from="0" data-to="554" data-speed="800">554</span></h3>
+								<h4 class="counter-desc"><font style="color:;">大数据</font></h4>
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-3">
+							<div class="counter-content text-center">
+								<h3 class="counter-digit "><span data-from="0" data-to="468" data-speed="800">468</span>+</h3>
+								<h4 class="counter-desc"><font style="color:;">奖杯荣誉</font></h4>
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-3">
+							<div class="counter-content text-center">
+								<h3 class="counter-digit "><span data-from="0" data-to="125" data-speed="800">125</span></h3>
+								<h4 class="counter-desc"><font style="color:;">团队成员</font></h4>
+							</div>
+						</div>
+						<div class="col-xs-6 col-sm-3">
+							<div class="counter-content text-center">
+								<h3 class="counter-digit  counted"><span data-from="0" data-to="452" data-speed="800">452</span>+</h3>
+								<h4 class="counter-desc"><font style="color:;">设计项目</font></h4>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- Features -->
+			<section class="our-features our-features-1 sections section-padding">
+				<div class="container">
+					<header class="section-header text-center">
+						<h3 class="section-sub-title">OUR FEATURES</h3>
+						<h2 class="section-title"><a href="{ms:global.url/}/146/index.html">人才招聘</a></h2>
+						<span class="line"></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium rutrum, ante dolor consectetur nisi</p>
+					</header>
+
+					<div class="row">
+						<div class="col-md-5">
+							<div class="wide-image">
+								<img class="img-responsive aligncenter" src="{ms:globalskin.url/}images/149507413747.png" alt="Feature Image">
+							</div>
+						</div>
+						<div class="col-md-7">
+							<ul class="features-list list-unstyled clearfix">
+								<li>
+									<div class="feature-item feature-item-1 clearfix">
+										<div class="feature-img">
+											<img class="img-responsive" src="{ms:globalskin.url/}images/14950744898.png" alt="Image">
+										</div>
+										<div class="feature-content">
+											<h3 class="title">品牌和包装</a></h3>
+											<span class="line"></span>
+											<p>包装不仅指的是为产品披上件外衣，而是指在与消费者接触的各类场合。</p>
+										</div>
+									</div>
+									<div class="feature-item feature-item-1 clearfix">
+										<div class="feature-img">
+											<img class="img-responsive" src="{ms:globalskin.url/}images/149507454747.png" alt="Image">
+										</div>
+										<div class="feature-content">
+											<h3 class="title">Web开发</a></h3>
+											<span class="line"></span>
+											<p>Web前端开发工程师是一个很新的职业。</p>
+										</div>
+									</div>
+									<div class="feature-item feature-item-1 clearfix">
+										<div class="feature-img">
+											<img class="img-responsive" src="{ms:globalskin.url/}images/149507458032.png" alt="Image">
+										</div>
+										<div class="feature-content">
+											<h3 class="title">产品动态</a></h3>
+											<span class="line"></span>
+											<p>支持用户创建的集群使用统一的存储Hive表的元数据信息。</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="feature-item feature-item-1 clearfix">
+										<div class="feature-img">
+											<img class="img-responsive" src="{ms:globalskin.url/}images/149507460317.png" alt="Image">
+										</div>
+										<div class="feature-content">
+											<h3 class="title">设计美观</a></h3>
+											<span class="line"></span>
+											<p>设计是 把一种设想 通过合理的规划 周密的计划 通过各种感觉形式传达出来的过程。</p>
+										</div>
+									</div>
+									<div class="feature-item feature-item-1 clearfix">
+										<div class="feature-img">
+											<img class="img-responsive" src="{ms:globalskin.url/}images/149507462409.png" alt="Image">
+										</div>
+										<div class="feature-content">
+											<h3 class="title">策略设计</a></h3>
+											<span class="line"></span>
+											<p>设计策略就是推测出企业的外部环境当中的有利条件。</p>
+										</div>
+									</div>
+									<div class="feature-item feature-item-1 clearfix">
+										<div class="feature-img">
+											<img class="img-responsive" src="{ms:globalskin.url/}images/149507464601.png" alt="Image">
+										</div>
+										<div class="feature-content">
+											<h3 class="title">数据分析</a></h3>
+											<span class="line"></span>
+											<p>数据分析适当的统计分析方法对收集来的大量数据进行分析。</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="feature-box">
+								<h3 class="title text-uppercase title-underline"><a href="{ms:global.url/}/93/index.html">关于我们</a></h3>
+								<p>THE STRENGTH OF BRAND INNOVATION SCIENCE AND TECHNOLOGY WILL NEVER STOP</p>
+								{ms:arclist typeid=93 size=1}
+								<li>
+									<p>[field.descrip/]</p>
+									<a href="[field.link/]" class="btn btn-primary btn-wide btn-icon">了解更多<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<a href="[field.link/]"><img class="img-responsive aligncenter" src="{ms:globalskin.url/}images/149510939651.jpg" alt="关于我们"></a>
+						</div>
+						</li>
+						{/ms:arclist}
+					</div>
+				</div>
+			</section>
+			<!-- Video -->
+			<section class="our-video our-video-1 sections section-padding">
+				<div class="container">
+					<a class="play-video" data-toggle="modal" data-target=".bs-example-modal-lg-video" aria-hidden="true"></a>
+					<h3 class="title">COMPLETE DESIGN FOR YOUR BUSINESS AGENCY!</h3>
+					<span class="line"></span>
+					<p class="author">Design comes from life</p>
+				</div>
+			</section>
+			<!-- Blog -->
+			<section class="our-blog our-blog-1 sections section-padding">
+				<div class="container">
+					<header class="section-header text-center">
+						<h3 class="section-sub-title">LET SHARE VALUE RECORD ENTERPRISE DEVELOPMENT STEPS</h3>
+						<h2 class="section-title"><a href="{ms:global.url/}/59/index.html">新闻中心</a></h2>
+						<span class="line"></span> {ms:arclist typeid=59 size=1}
+						<p>[field.descrip/]</p>
+						{/ms:arclist}
+					</header>
+					<div class="row">
+						{ms:arclist typeid=59 size=3}
+						<div class="col-xs-6 col-sm-4">
+							<div class="blog-post">
+								<div class="post-feature-img">
+									<a href="[field.link/]" class="img-hover"><img class="img-responsive" src="{ms:global.host/}[field.litpic/]" alt="Image"></a>
+								</div>
+								<div class="entry-header">
+									<h3 class="post-title"><a href="[field.link/]"><font style="color:;">[field.title/]</font></a></h3>
+									<p class="post-meta">[field.date fmt=yyyy-MM-dd /]</p>
+								</div>
+								<p>[field.descrip/]</p>
+								<div class="entry-footer">
+									<a href="[field.typelink/]" class="post-comments"><i class="fa fa-envelope-o" aria-hidden="true"></i> [field.typename/]</a>
+									<a href="[field.link/]" class="read-more"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+								</div>
+							</div>
+						</div>
+						{/ms:arclist}
+					</div>
+				</div>
+			</section>
+			<!-- Subscription -->
+			<section class="subscribe sections section-padding">
+				<div class="container">
+					<h3 class="title">请输入订阅邮箱：</h3>
+					<form name="listform" id="listform" action="" method="">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-lg-offset-3">
+								<div class="form-group">
+									<input type="email" name="email" id="email" placeholder=" 邮件订阅 " onfocus="if(this.value==' 邮件订阅 ') {this.value=''}" onblur="checkEmail(this)" required="required">
+									<i class="fa fa-envelope-o"></i>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-lg-2">
+								<div class="form-group">
+									<input type="button" value=" 提交 " id="subscribe-button" class="btn-button">
+									<i class="fa fa-paper-plane-o"></i>
+								</div>
+							</div>
+						</div>
+					</form>
+					<p>输入订阅邮箱，获取企业最新促销信息！</p>
+					<p><strong>We dont do spam.</strong></p>
+				</div>
+			</section>
+			<!-- Clients -->
+			<section class="our-clients sections section-padding">
+				<div class="container">
+					<header class="section-header text-center">
+						<h3 class="section-sub-title">HAS BEEN FULL OF ENTHUSIASM TO MEET UNDERSTAND DESIGN YOU!</h3>
+						<h2 class="section-title"><a href="	{ms:global.url/}/61/index.html">客户案例</a></h2>
+						<span class="line"></span> {ms:arclist typeid=61 size=1}
+						<p>[field.descrip/]</p>
+						{/ms:arclist}
+					</header>
+					<div class="row">
+						{ms:arclist typeid=61 size=8}
+						<div class="col-xs-6 col-sm-3">
+							<div class="single-client">
+								<a href="[field.link/]"><img src="{ms:global.host/}[field.litpic/]" style="height: 200px;width: 264px;" alt="[field.title/]"></a>
+							</div>
+						</div>
+						{/ms:arclist}
+					</div>
+				</div>
+			</section>
+			<!-- Call to Action -->
+			<div class="call-to-action">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<p>{ms:global.name/}</p>
+						</div>
+						<div class="col-md-4">
+							<a href="{ms:global.url/}/19/index.html" class="btn">联系我们</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Footer -->
+			<footer id="footer" class="footer">
+				<div class="container">
+					<aside class="row footer-widgets">
+						<div class="widget-column col-sm-6 col-md-3">
+							<section class="widget widget_text">
+								<h2 class="widget-title">&nbsp;</h2>
+								<div class="textwidget">
+									<div class="footer-logo-widget">
+										<a href="{ms:global.host/}"><img src="http://cdn.mingsoft.net/global/images/MStore300.png" alt="{ms:global.name/}" class="foot-logo" /></a>
+										<p></p>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="widget-column col-sm-6 col-md-3">
+							<section class="widget widget_nav_menu">
+								<h2 class="widget-title">快速导航</h2>
+								<ul>
+									<li>
+										<a href="{ms:global.url/}/93/index.html" target=" _blank">关于我们</a>
+									</li>
+									<li>
+										<a href="{ms:global.url/}/59/index.html" target=" _blank">新闻中心</a>
+									</li>
+									<li>
+										<a href="{ms:global.url/}/106/index.html" target=" _blank">产品列表</a>
+									</li>
+									<li>
+										<a href="{ms:global.url/}/19/index.html" target=" _blank">联系我们</a>
+									</li>
+									<li>
+										<a href="{ms:global.url/}/61/index.html" target=" _blank">客户案例</a>
+									</li>
+									<li>
+										<a href="{ms:global.url/}/146/index.html" target=" _blank">人才招聘</a>
+									</li>
+								</ul>
+							</section>
+						</div>
+						<div class="clearfix visible-sm"></div>
+						<div class="widget-column col-sm-6 col-md-3">
+							<section class="widget widget_featured_posts">
+								<h2 class="widget-title">关注官方微信</h2>
+								<img src="http://cdn.mingsoft.net/global/images/weixin.jpg" width="170">
+							</section>
+						</div>
+						<div class="widget-column col-sm-6 col-md-3">
+							<section class="widget widget_twitter">
+								<h2 class="widget-title">联系我们</h2>
+								<ul>
+									<li>
+										<p>
+											<a>地 址：</a>铭飞科技有限公司</span>
+										</p>
+									</li>
+									<li>
+										<p>
+											<a>电 话：</a> 8888888 </p>
+									</li>
+									<li>
+										<p>
+											<a>邮 箱：</a> 1391265900@qq.com </p>
+									</li>
+								</ul>
+							</section>
+						</div>
+					</aside>
+				</div>
+				<div class="sub-footer text-center">
+					<div class="container">
+						<a>{ms:global.copyright/}</a>
+						<div class="home-links">
+							<p>热门关键词： </p>
+							<div class="hr"></div>
+							<div class="col-xs-12 col-sm-12 col-md-2 col-lg-1 home-links-left">
+								友情链接：
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-10 col-lg-11">
+								<div class="links-logo">
+									<a href="http://ms.mingsoft.net/" title="{ms:global.name/}"><img src="http://cdn.mingsoft.net/global/images/MStore.png" width="88" height="31" /></a>
+								</div>
+								<div class="links-a">
+									<a href="http://ms.mingsoft.net/" target="_blank">MS</a>/
+									<a href="http://ms.mingsoft.net/" target="_blank">铭飞科技有限公司</a>/
+
+								</div>
+							</div>
+						</div>
+						<!-- /home-links -->
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- Required Plugins and Scripts -->
+		<!-- search -->
+		<div class="container-fluid">
+			<div class="modal fade bs-example-modal-lg-search" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<div class="blank5"></div>
+						</div>
+						<div class="row">
+							<form name='search' action="/index.php?case=archive&act=search" onsubmit="search_check();" method="post">
+								<div class="col-lg-1"></div>
+								<div class="col-lg-10">
+									<div class="input-group">
+										<input type="text" name="keyword" class="form-control" placeholder="请输入查询关键词">
+										<span class="input-group-btn">
+												<button class="btn btn-default" name='button' type="button">Go!</button>
+										</span>
+
+									</div>
+								</div>
+								<div class="col-lg-1"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- search end -->
+			<div class="servers">
+				<!--[if (gte IE 7)|!(IE)]><!-->
+				<!-- 在线客服 -->
+				<style type="text/css">
+					.izl-rmenu {
+						position: fixed;
+						left: 0;
+						margin-right: 20px;
+						bottom: 0px;
+						padding-bottom: 0px;
+						z-index: 999;
+					}				
+					.izl-rmenu .sbtn {
+						width: 72px;
+						height: 73px;
+						margin-bottom: 1px;
+						cursor: pointer;
+						position: relative;
+					}					
+					.izl-rmenu .btn-qq {
+						background: url({ms:globalskin.url/}images/r_qq.png) 0px 0px no-repeat;
+						background-color: #6da9de;
+						color: #FFF;
+					}					
+					.izl-rmenu .btn-qq:hover {
+						background-color: #488bc7;
+						color: #FFF;
+					}					
+					.izl-rmenu .btn-qq .qq {
+						background-color: #488bc7;
+						position: absolute;
+						width: 160px;
+						right: -160px;
+						top: 0px;
+						line-height: 73px;
+						color: #FFF;
+						font-size: 18px;
+						text-align: center;
+						display: none;
+					}					
+					.izl-rmenu .btn-qq a {
+						color: #FFF;
+						font-size: 14px;
+					}					
+					.izl-rmenu .btn-wx {
+						background: url({ms:globalskin.url/}images/r_wx.png) 0px 0px no-repeat;
+						background-color: #78c340;
+					}					
+					.izl-rmenu .btn-wx:hover {
+						background-color: #58a81c;
+					}				
+					.izl-rmenu .btn-wx .pic {
+						position: absolute;
+						right: -160px;
+						top: 0px;
+						display: none;
+						width: 160px;
+						height: 160px;
+					}					
+					.izl-rmenu .btn-phone {
+						background: url({ms:globalskin.url/}images/r_phone.png) 0px 0px no-repeat;
+						background-color: #fbb01f;
+					}					
+					.izl-rmenu .btn-phone:hover {
+						background-color: #ff811b;
+					}					
+					.izl-rmenu .btn-phone .phone {
+						background-color: #ff811b;
+						position: absolute;
+						width: 160px;
+						right: -160px;
+						top: 0px;
+						line-height: 73px;
+						color: #FFF;
+						font-size: 18px;
+						text-align: center;
+						display: none;
+					}					
+					.izl-rmenu .btn-ali {
+						background: url({ms:globalskin.url/}images/r_ali.png) 0px 0px no-repeat;
+						background-color: #B8860B;
+					}					
+					.izl-rmenu .btn-ali:hover {
+						background-color: #808000;
+					}					
+					.izl-rmenu a.btn-ali,
+					.izl-rmenu a.btn-ali:visited {
+						background: url({ms:globalskin.url/}images/r_ali.png) 0px 0px no-repeat;
+						background-color: #B8860B;
+						text-decoration: none;
+						display: block;
+					}				
+					.izl-rmenu .btn-wangwang {
+						background: url({ms:globalskin.url/}images/r_wangwang.png) 0px 0px no-repeat;
+						background-color: #FFD700;
+					}					
+					.izl-rmenu .btn-wangwang:hover {
+						background-color: #DAA520;
+					}					
+					.izl-rmenu a.btn-wangwang,
+					.izl-rmenu a.btn-wangwang:visited {
+						background: url({ms:globalskin.url/}images/r_wangwang.png) 0px 0px no-repeat;
+						background-color: #FFD700;
+						text-decoration: none;
+						display: block;
+					}					
+					.izl-rmenu .btn-skype {
+						background: url({ms:globalskin.url/}images/r_skype.png) 0px 0px no-repeat;
+						background-color: #FF69B4;
+					}					
+					.izl-rmenu .btn-skype:hover {
+						background-color: #8B008B;
+					}				
+					.izl-rmenu a.btn-skype,
+					.izl-rmenu a.btn-skype:visited {
+						background: url({ms:globalskin.url/}images/r_skype.png) 0px 0px no-repeat;
+						background-color: #FF69B4;
+						text-decoration: none;
+						display: block;
+					}					
+					.izl-rmenu .btn-web {
+						background: url({ms:globalskin.url/}images/r_web.png) 0px 0px no-repeat;
+						background-color: #008a46;
+					}					
+					.izl-rmenu .btn-web:hover {
+						background-color: #00663a;
+					}					
+					.izl-rmenu a.btn-web,
+					.izl-rmenu a.btn-web:visited {
+						background: url({ms:globalskin.url/}images/r_web.png) 0px 0px no-repeat;
+						background-color: #008a46;
+						text-decoration: none;
+						display: block;
+					}					
+					.izl-rmenu .btn-top {
+						background: url({ms:globalskin.url/}images/r_top.png) 0px 0px no-repeat;
+						background-color: #666666;
+						display: none;
+					}					
+					.izl-rmenu .btn-top:hover {
+						background-color: #444;
+					}
+				</style>
+				<script language="javascript" type="text/javascript">
+					$(function() {
+						var tophtml = "<div id=\"izl_rmenu\" class=\"izl-rmenu\"><div class=\"sbtn btn-qq\"><div class=\"qq\"><a rel=\"nofollow\" target=\"_blank\" href=\"#\">客服一</a><br /><a rel=\"nofollow\" target=\"_blank\" href=\"#\">客服二</a></div></div><a rel=\"nofollow\" href=\"#\" target=\"_blank\" class=\"sbtn btn-wangwang\"></a><a rel=\"nofollow\" target=\"_blank\" href=\"#\" class=\"sbtn btn-ali\"></a><a rel=\"nofollow\" target=\"_blank\" href=\"#\" target=\"_blank\" class=\"sbtn btn-skype\"></a><div class=\"sbtn btn-wx\"><img class=\"pic\" src=\"http://cdn.mingsoft.net/global/images/weixin.jpg\" onclick=\"window.location.href=\'http:\'\"/></div><div class=\"sbtn btn-phone\"><div class=\"phone\">888-88888888</div></div><div class=\"sbtn btn-top\"></div></div>";
+						$("#top").html(tophtml);
+						$("#izl_rmenu").each(function() {
+							$(this).find(".btn-qq").mouseenter(function() {
+								$(this).find(".qq").fadeIn("fast");
+							});
+							$(this).find(".btn-qq").mouseleave(function() {
+								$(this).find(".qq").fadeOut("fast");
+							});
+							$(this).find(".btn-wx").mouseenter(function() {
+								$(this).find(".pic").fadeIn("fast");
+							});
+							$(this).find(".btn-wx").mouseleave(function() {
+								$(this).find(".pic").fadeOut("fast");
+							});
+							$(this).find(".btn-phone").mouseenter(function() {
+								$(this).find(".phone").fadeIn("fast");
+							});
+							$(this).find(".btn-phone").mouseleave(function() {
+								$(this).find(".phone").fadeOut("fast");
+							});
+							$(this).find(".btn-top").click(function() {
+								$("html, body").animate({
+									"scroll-top": 0
+								}, "fast");
+							});
+						});
+						var lastRmenuStatus = false;
+						$(window).scroll(function() { //bug
+							var _top = $(window).scrollTop();
+							if(_top > 200) {
+								$("#izl_rmenu").data("expanded", true);
+							} else {
+								$("#izl_rmenu").data("expanded", false);
+							}
+							if($("#izl_rmenu").data("expanded") != lastRmenuStatus) {
+								lastRmenuStatus = $("#izl_rmenu").data("expanded");
+								if(lastRmenuStatus) {
+									$("#izl_rmenu .btn-top").slideDown();
+								} else {
+									$("#izl_rmenu .btn-top").slideUp();
+								}
+							}
+						});
+					});
+				</script>
+				<div id="top"></div>
+				<![endif]-->
+<!-- 短信 -->
+			</div>
+			<div class="servers-wap">
+			<style type="text/css">
+			#plug-wrap {
+			    position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0);
+			    z-index:800;
+			}
+			.top_bar {
+			    position:fixed;
+			    bottom:0;
+			    right:0px;
+			    z-index:900;
+			    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			    font-family: Helvetica, Tahoma, Arial, Microsoft YaHei, sans-serif;
+			}
+			.plug-menu {
+			    -webkit-appearance:button;
+			    display:inline-block;
+			    width:36px;
+			    height:36px;
+			    border-radius:36px;
+			    position: absolute;
+			    bottom:17px;
+			    right: 17px;
+			    z-index:999;
+			    box-shadow: 0 0 0 4px #FFFFFF, 0 2px 5px 4px rgba(0, 0, 0, 0.25);
+			   
+			    -webkit-transition: -webkit-transform 200ms;
+			    -webkit-transform:rotate(1deg);
+			    color:#fff;
+			    background-image:url('images/plug.png');
+			    background-repeat: no-repeat;
+			    -webkit-background-size: 80% auto;
+			    background-size: 80% auto;
+			    background-position: center center;
+			}
+			.plug-menu:before {
+			    font-size:20px;
+			    margin:9px 0 0 9px;
+			}
+			.plug-menu:checked {
+			    -webkit-transform:rotate(135deg);
+			}
+			.top_menu>li {
+			    width: 32px;
+			    height:32px;
+			    border-radius:32px;
+			    box-shadow: 0 0 0 3px #FFFFFF, 0 2px 5px 3px rgba(0, 0, 0, 0.25);
+			    
+			    position:absolute;
+			    bottom:0;
+			    right:0;
+			    margin-bottom: 20px;
+			    margin-right:20px;
+			    z-index:900;
+			    -webkit-transition: -webkit-transform 200ms;
+			}
+			.top_menu>li a {
+			    color:#fff;
+			    font-size:20px;
+			    display: block;
+			    height: 100%;
+			    line-height: 33px;
+			    text-align: center;
+			}
+			.top_menu>li>a label{
+			display:none;
+			}
+			.top_menu>li a img {
+			display: block;
+			width: 22px;
+			height: 22px;
+			text-indent: -999px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -11px;
+			margin-left: -11px;
+			}
+			.top_menu>li.on:nth-of-type(1) {
+			-webkit-transform: translate(-0, -100px) rotate(720deg);
+			}
+			.top_menu>li.on:nth-of-type(2) {
+			-webkit-transform: translate(-47px, -81px) rotate(720deg);
+			}
+			.top_menu>li.on:nth-of-type(3) {
+			-webkit-transform: translate(-81px, -45px) rotate(720deg);
+			}
+			.top_menu>li.on:nth-of-type(4) {
+			-webkit-transform: translate(-100px, 0) rotate(720deg);
+			}
+			 
+			#sharemcover {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.7);
+			display: none;
+			z-index: 20000;
+			}
+			#sharemcover img {
+			position: fixed;
+			right: 18px;
+			top: 5px;
+			width: 260px;
+			height: 180px;
+			z-index: 20001;
+			border:0;
+			}
+			</style>
+			<div class="top_bar" style="-webkit-transform:translate3d(0,0,0)">
+			<nav>
+			     <ul id="top_menu" class="top_menu">
+			      <input type="checkbox" id="plug-btn" class="plug-menu themeStyle" style="background-image:url('{ms:globalskin.url/}images/plug.png');border:0px;">
+			       <li class="themeStyle out" style="background:"> 
+			  <a href="tel:400-400-4000"><img src="{ms:globalskin.url/}images/plugmenu1.png"><label>电 话</label></a>
+			  </li>
+			  <li class="themeStyle out" style="background:">
+			<a href="sms:18711483478888"><img src="{ms:globalskin.url/}images/plugmenu3.png"><label>短信</label></a>
+			</li>
+			<li class="themeStyle out" style="background:">
+			<a href="" id="btn_fenxiang"><img src="{ms:globalskin.url/}images/plugmenu5.png"><label>QQ号码</label></a>
+			</li>   
+			<li class="themeStyle out" style="background:">
+			<a href=""><img src="{ms:globalskin.url/}images/plugmenu6.png"><label>留言</label></a>
+			</li>
+			</ul>
+			  </nav>
+			</div>
+			<div id="plug-wrap" style="display: none;" ></div>
+			<script>
+			$(function(){
+			        $(".plug-menu").click(function(){
+			        var li = $(this).parents('ul').find('li');
+			        if(li.attr("class") == "themeStyle on"){
+			                li.removeClass("themeStyle on");
+			                li.addClass("themeStyle out");
+			        }else{
+			                li.removeClass("themeStyle out");
+			                li.addClass("themeStyle on");
+			        }
+			        });
+			});
+			</script>  
+			</div>
+			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"6","bdPos":"right","bdTop":"100"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			<script>
+			(function(){
+			    var bp = document.createElement('script');
+			    var curProtocol = window.location.protocol.split(':')[0];
+			    if (curProtocol === 'https') {
+			        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+			    }
+			    else {
+			        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+			    }
+			    var s = document.getElementsByTagName("script")[0];
+			    s.parentNode.insertBefore(bp, s);
+			})();
+			</script>
+			<script src="{ms:globalskin.url/}js/bootstrap.min.js"></script>
+			<script src="{ms:globalskin.url/}js/owl.carousel.min.js"></script>
+			<script src="{ms:globalskin.url/}js/scripts.js"></script>
+    </body>
+</html>

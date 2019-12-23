@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+{ms:include filename=head-file.htm/}
+<body>
+{ms:include filename=head.htm/}
+	<div class="nbanner" style="display: none;"></div>
+	<link rel="stylesheet" type="text/css" href="{ms:globalskin.url/}/css/fancybox.css">
+	<!-- 内容开始 -->
+	<div class="n-back-0">
+		<div class="kwidth">
+			<!-- 子菜单 -->
+			<div class="subcate">
+				<ul>
+					{ms:channel typeid=106}
+					<li><a  href="[field.typelink/]">[field.typetitle/]</a></li>
+					{/ms:channel}
+				</ul>
+			</div>
+			<!-- /子菜单 -->
+			<div class="kwidth">
+				<div class="pro_0_list n-bor">
+					<ul class="wul105 number_3">
+						{ms:arclist type=115 size=6 ispaging=true}
+						<li class="wow slideInUp" data-wow-delay="0.1s">
+							<div class="content">
+								<a class="img" style="height: 244px" href="javascript:void(0)">
+									 <img src="{ms:global.host/}[field.litpic/]" style="height: 244px"
+										  alt="[field.keyword/]" />
+								</a>
+								<h3 class="f14 text-center pd-t15 pd-b5">
+									<a title="[field.title/]" href="javascript:void(0)">商业广告拍摄</a>
+								</h3>
+								<p class="f11 text-center">Business</p>
+							</div>
+							<div class="dask" style="height: 244px">
+								<a rel="example_group" href="{ms:global.host/}[field.litpic/]"></a>
+							</div>
+						</li>
+						{/ms:arclist}
+					</ul>
+					<div class="hg40"></div>
+				</div>
+				<div id="pages" class="page">
+					<a class="a1">一共有<font>{ms:page.total/}</font>页</a>
+					<a href="{ms:page.pre/}">上一页</a>
+					<a href="{ms:page.next/}">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 内容开始 -->
+	<script type="text/javascript" src="js/fancybox.js"></script>
+	{ms:include filename=footer.htm/}
+</body>
+<script type="text/javascript">
+	//点击放大
+	$("a[rel=example_group]").fancybox();
+</script>
+</html>
+<script>
+$(function(){
+	var r=location.href;
+	if(r.match("107")){
+		$(".subcate ul li").find("a").removeClass('on');
+		$(".subcate ul li:eq(0)").find("a").addClass("on");
+	}else if(r.match("108")){
+		$(".subcate ul li").find("a").removeClass('on');
+		$(".subcate ul li:eq(1)").find("a").addClass("on");
+	}else{
+		$(".subcate ul li").find("a").removeClass('on');
+		$(".subcate ul li:eq(0)").find("a").addClass("on");
+	}
+})
+</script>

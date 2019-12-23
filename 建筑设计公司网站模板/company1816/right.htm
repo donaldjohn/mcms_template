@@ -1,0 +1,30 @@
+<div class="col-md-3">
+	<div class="row">
+		<div class="met-news-bar">
+  			<form method='get' action="">
+                <input type='hidden' name='lang' value='cn' />
+                <input type='hidden' name='class1' value='101' />
+                <div class="form-group">
+                    <div class="input-search">
+                        <button type="button" class="input-search-btn"><i class="icon wb-search" aria-hidden="true"></i></button>
+                        <input type="text" class="form-control" name="searchword" placeholder="Search">
+                    </div>
+                </div>
+            </form>
+			<div class="recommend news-list-md">
+				<h3>为您推荐</h3>
+				<ul class="list-group list-group-bordered">
+					{ms:arclist typeid=59 size=3}
+					<li class="list-group-item"><a href="[field.link/]?lang=cn&id=67" title="[field.title/]" target='_self'>[field.title/]</a></li>
+					{/ms:arclist}
+				</ul>
+			</div>
+                 <ul class="column">
+                     <li><a href="#" title="所有文章" target='_self'>所有文章</a></li>
+                     <li><a href="{ms:global.url/}/61/65/index.html" class="active" title="每周精选">网站设计</a></li>
+                     <li><a href="{ms:global.url/}/61/66/index.html"  title="创意人记录">手机应用</a></li>
+                     <li><a href="{ms:global.url/}/61/67/index.html"  title="在海外">平面应用</a></li>
+                 </ul>
+		</div>
+	</div>
+</div>

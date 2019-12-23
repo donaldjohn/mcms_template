@@ -1,0 +1,244 @@
+﻿<!DOCTYPE HTML>
+<html>
+    {ms:include filename=head-file.htm/}
+    <body>
+        {ms:include filename=head.htm/}
+        <!--内容开始-->
+        <style>
+        .logoImg{
+        	width: 80%;
+        	margin-top: 0.3em;
+        }
+        .index_case li img{
+        	/* width: 96px; */
+    		height: 7.2em;
+        }
+        .index_show li img{
+        	/* width: 145px; */
+    		height: 10em;
+        }
+        .nav-btn{
+        	line-height: 43px;
+        }
+        /* .headerIcon{
+        	font-size:1em;
+        } */
+        </style>
+        <div class="allpage">
+            <div class="black-fixed iconfont">
+                <i class="iconfont headerIcon">&#xe91e;</i>
+            </div>
+            <!--页头开始-->
+            <div class="header">
+                <div class="head">
+                    <a href="{ms:global.host/}" title="{ms:global.name/}" class="logo">
+                        <img class="logoImg" src="http://cdn.mingsoft.net/global/images/MStore.png" />
+                    </a>
+                    <div class="nav-btn">
+                       <i class="iconfont headerIcon">&#xe60a;</i>
+                    </div>
+                </div>
+            </div>
+            <!--页头结束-->
+            <div class="content content_new">
+                <!--幻灯片图片开始-->
+                <div class="banner">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="{ms:globalskin.url/}/images/1-1p123140415641.jpg">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{ms:globalskin.url/}/images/1-1p124103k2l7.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{ms:globalskin.url/}/images/1-1p124103606247.jpg">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination">
+                        </div>
+                    </div>
+                </div>
+                <!--幻灯片图片结束-->
+                <!--首页导航开始-->
+                <div class="nav_new">
+                    <ul>
+                        <li class="blue">
+                            <a title="关于我们" href="{ms:global.url/}/93/index.html">
+                                	关于我们
+                            </a>
+                        </li>
+                        <li class="blue">
+                            <a title="产品展示" href="{ms:global.url/}/106/index.html">
+                               	 产品展示
+                            </a>
+                        </li>
+                       <li class="blue">
+                            <a title="荣誉资质" href="{ms:global.url/}/93/96/index.html">
+                                	荣誉资质
+                            </a>
+                        </li>
+                        <li class="blue">
+                            <a title="新闻资讯" href="{ms:global.url/}/59/index.html">
+                                	新闻资讯
+                            </a>
+                        </li>
+                        <li class="blue">
+                            <a title="成功案例" href="{ms:global.url/}/61/index.html">
+                                	成功案例
+                            </a>
+                        </li>
+                        <li class="blue">
+                            <a title="人才招聘" href="{ms:global.url/}/146/index.html">
+                                	人才招聘
+                            </a>
+                        </li>
+                        <li class="blue">
+                            <a title="留言反馈" href="	{ms:global.url/}/19/142/index.html">
+                                	留言反馈
+                            </a>
+                        </li>
+                        <li class="blue">
+                            <a title="联系我们" href="{ms:global.url/}/19/141/index.html">
+                               	 联系我们
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="c">
+                    </div>
+                </div>
+                <!--首页导航结束-->
+                <!--热销服装开始-->
+                <div class="common_title">
+                    <h2>
+                        <i>
+                            Hot products
+                        </i>
+                        <br>
+                        	热销产品
+                    </h2>
+                    <span>
+                    </span>
+                </div>
+                <div class="index_case">
+                    <ul>
+                    	{ms:arclist typeid=106 size=3}
+                        <li>
+                            <a href="[field.link/]">
+                                <img src="{ms:global.host/}[field.litpic/]">
+                                <span>
+                                  	  [field.title/]
+                                </span>
+                            </a>
+                        </li>
+                     	{/ms:arclist}   
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="more_i">
+                    <a href="{ms:global.url/}/106/index.html" title="点击查看更多">
+                        	点击查看更多
+                    </a>
+                </div>
+                <!--热销服装结束-->
+                <!--服装展厅开始-->
+                <div class="common_title">
+                    <h2>
+                        <i>
+                            CASE
+                        </i>
+                        <br>
+                      	  成功案例
+                    </h2>
+                    <span>
+                    </span>
+                </div>
+                <div class="index_show">
+                    <ul>
+                    	{ms:arclist typeid=106 size=4}
+                        <li>
+                            <a href="[field.link/]">
+                                <img src="{ms:global.host/}[field.litpic/]">
+                                <span>
+                                   	[field.title/]
+                                </span>
+                            </a>
+                        </li>
+                        {/ms:arclist}   
+                        <div class="clear">
+                        </div>
+                    </ul>
+                </div>
+                <div class="more_i">
+                    <a href="{ms:global.url/}/61/index.html" title="点击查看更多">
+                        	点击查看更多
+                    </a>
+                </div>
+                <!--服装展厅结束-->
+                <!--公司动态开始-->
+                <div class="common_title">
+                    <h2>
+                        <i>
+                            NEWS
+                        </i>
+                        <br>
+                        	新闻中心
+                    </h2>
+                    <span>
+                    </span>
+                </div>
+                <div class="case_i_c">
+                    <ul>
+                    	{ms:arclist typeid=106 size=3}
+                        <li>
+                            <a href="[field.link/]">
+                                <img src="{ms:global.host/}[field.litpic/]" width="15%">
+                                <h2>
+                                   	[field.title/]
+                                </h2>
+                                <span>
+                                    	[field.descrip/]
+                                </span>
+                                <i class="cricle1">
+                                </i>
+                                <i class="cricle2">
+                                </i>
+                                <i class="cricle3">
+                                </i>
+                                <i class="cricle4">
+                                </i>
+                            </a>
+                        </li>
+                        {/ms:arclist}   
+                    </ul>
+                </div>
+                <div class="more_i">
+                    <a href="{ms:global.url/}/59/index.html" title="点击查看更多">
+                        	点击查看更多
+                    </a>
+                </div>
+                <!--公司动态结束-->
+                <!--联系方式开始-->
+                <div class="hotline">
+                    <a href="tel:" class="tel_number">
+                        4000-000-000
+                    </a>
+                    <br>
+                   	 地址：江西省景德镇市昌江区
+                    <br>
+                   	 邮箱：942770163@qq.com
+                </div>
+                <!--联系方式结束-->
+                <div class="beian">
+                    	技术支持：
+                    <a target="_blank" href="http://ms.mingsoft.net/">
+                       	 铭飞科技
+                    </a>
+                </div>
+            </div>
+            {ms:include filename=footer.htm/}
+        </div>
+        <!--内容结束-->
+    </body>
+
+</html>

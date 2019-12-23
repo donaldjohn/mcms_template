@@ -1,0 +1,80 @@
+﻿<!DOCTYPE HTML>
+<html>
+    {ms:include filename=head-file.htm/}
+    <body>
+        {ms:include filename=head.htm/}
+        <!--内容开始-->
+        <div class="allpage">
+            {ms:include filename=menu.htm/}
+            <!--在线留言开始-->
+            <div class="content">
+                <ul class="login">
+                    <form action="" enctype="multipart/form-data" method="post">
+                        <input type="hidden" name="action" value="post" />
+                        <input type="hidden" name="diyid" value="1" />
+                        <input type="hidden" name="do" value="2" />
+                        <li>
+                            <input type="text" name="name" id="name" placeholder="姓名" class="login_input "
+                            />
+                        </li>
+                        <li>
+                            <input type="text" name="tel" id="tel" placeholder="手机号码" class="login_input">
+                        </li>
+                        <li>
+                            <input type="text" name="email" id="email" placeholder="邮箱" class="login_input "
+                            />
+                        </li>
+                        <li>
+                            <textarea name="content" cols="" rows="" placeholder="咨询内容" class="login_textarea">
+                            </textarea>
+                        </li>
+                        <input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;content,text"
+                        />
+                        <input type="hidden" name="dede_fieldshash" value="f2737eb14ddce24d851552bf7cecbd49"
+                        />
+                        <li>
+                            <input class="login_btn common_bg" type="button" id="tj" value="提   交">
+                        </li>
+                    </form>
+                </ul>
+            </div>
+            <!--在线留言结束-->
+            {ms:include filename=footer.htm/}
+        </div>
+        <!--内容结束-->
+        <script>
+            $(function() {
+                $('#tj').click(function() {
+                    //alert(1)
+                    if ($('#name').val() == '') {
+                        alert('请输入您的姓名！');
+                        return false;
+                    }
+                    if ($("#tel").val() == "") {
+                        alert("请输入你的手机！");
+                        $("#tel").focus();
+                        return false;
+                    }
+                    if (!$("#tel").val().match(/^(((13[0-9]{1})|147|150|151|152|153|154|155|156|158|157|159|170|180|181|182|183|184|185|186|187|188|189)+\d{8})$/)) {
+                        alert("手机号码格式不正确！");
+                        $("#tel").focus();
+                        return false;
+                    }
+                    if ($("#email").val() == "") {
+                        alert("请输入电子邮箱!");
+                        return false;
+                    }
+                    if (!$("#email").val().match(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)) {
+                        alert("电子邮箱格式不正确");
+                        $("#email").focus();
+                        return false;
+                    }
+                    if ($('#content').val() == '') {
+                        alert('请输入留言内容！');
+                        return false;
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>

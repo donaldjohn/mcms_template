@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+{ms:include filename=head-file.htm/}
+<body>
+	{ms:include filename=head.htm/}
+	<div class="nbanner" style="display: none;"></div>
+	<!-- 内容开始 -->
+	<div class="n-back-0">
+		<div class="kwidth">
+			{ms:include filename=nav-menu.htm/}
+			<div class="kwidth">
+				<!-- 左侧内容 -->
+				<div class="content_left n-back-1 fl wow slideInUp"
+					data-wow-delay="0.1s">
+					<div class="detail-title">
+						<h1 class="f30">{ms:field.title/}</h1>
+						<p class="d-t">
+							<span class="d">日期：{ms:field.date fmt="yyyy-MM-dd"/}</span>
+							<span class="t">类型：<a href="{ms:global.url/}/62/index.html">{ms:field.source/}</a></span>
+						</p>
+						<p class="keyword">关键词：{ms:field.keyword/}</p>
+						<div class="hg22"></div>
+						<div class="shar bdsharebuttonbox">
+							<a class="pre_a" href="{ms:field.prelink/} " title="{ms:field.title/}"></a>
+							<a class="bds_qzone" data-cmd="qzone" href="#" target="_blank"></a>
+							<a class="bds_tsina" data-cmd="tsina" href="#" target="_blank"></a>
+							<a href="{ms:global.url/}/62/index.html" class="catname"></a>
+							<a class="bds_weixin" data-cmd="weixin" href="#" target="_blank"></a>
+							<a class="bds_tqq" data-cmd="tqq" href="#" target="_blank"></a>
+							<a class="next_no" title="没有了" href="{ms:field.nextlink/}"></a>
+						</div>
+					</div>
+					<div class="detail-content n-bor mt20 mb35">
+						{ms:field.content/}
+						<div class="hg15">
+						</div>
+					</div>
+					<div class="shar bdsharebuttonbox mb35">
+							<a class="pre_a" href="{ms:field.prelink/} " title="{ms:field.title/}"></a>
+							<a class="bds_qzone" data-cmd="qzone" href="#" target="_blank"></a>
+							<a class="bds_tsina" data-cmd="tsina" href="#" target="_blank"></a>
+							<a href="{ms:global.url/}/62/index.html" class="catname"></a>
+							<a class="bds_weixin" data-cmd="weixin" href="#" target="_blank"></a>
+							<a class="bds_tqq" data-cmd="tqq" href="#" target="_blank"></a>
+							<a class="next_no" title="没有了" href="{ms:field.nextlink/}"></a>
+					</div>
+				</div>
+				<!-- /左侧内容 -->
+				<!-- 右侧内容 -->
+				<div class="content_right fr wow slideInUp" data-wow-delay="0.1s">
+					<div class="recommend_pro mb20 pd-b10 n-back-1">
+						<h3 class="f14 pd-l15 n-bor-b">资讯</h3>
+						<a href="{ms:global.url/}/62/index.html	"><img src="{ms:globalskin.url/}images/579b25caf121c.jpg" alt="关于我们的摄影" /></a>
+						<p></p>
+					</div>
+					<div class="recommend_news n-back-1">
+						<h3 class="f14 pd-l15 n-bor-b">热门新闻</h3>
+						<ul>
+							{ms:arclist typeid=61 size=3}
+							<li>
+								<a href="[field.link/]">[field.title/]</a>
+								<span class="f11 block pd-t5 pd-b5">[field.date fmt=yyyy-MM-dd/]</span>
+								<p class="f11 line-height18">[field.descrip/]</p>
+							</li>
+							{/ms:arclist}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="hg20">
+			</div>
+		</div>
+	</div>
+	<!-- 内容开始 -->
+	{ms:include filename=footer.htm/}
+</body>
+<script>
+	window._bd_share_config = {
+		"common" : {
+			"bdSnsKey" : {},
+			"bdText" : "",
+			"bdMini" : "2",
+			"bdMiniList" : false,
+			"bdPic" : "",
+			"bdStyle" : "0",
+			"bdSize" : "16"
+		},
+		"share" : {}
+	};
+	with (document)
+		0[(getElementsByTagName('head')[0] || body)
+				.appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='
+				+ ~(-new Date() / 36e5)];
+	
+	$(function(){
+		var r=location.href;
+		if(r.match("61")){
+			$(".subcate ul li").find("a").removeClass('on');
+			$(".subcate ul li:eq(1)").find("a").addClass("on");
+		}
+	})
+</script>
+
+</html>

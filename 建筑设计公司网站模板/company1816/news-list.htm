@@ -1,0 +1,95 @@
+﻿<!DOCTYPE HTML><!-- 所有子59 -->
+<html>
+{ms:include filename=head-file.htm/}
+<body class="met-navfixed">
+<!--[if lte IE 8]>
+	<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+	<p class="browserupgrade font-size-18">你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。</p>
+	</div>
+<![endif]-->
+{ms:include filename=head.htm/}
+<div class="met-banner " data-height='300||'>
+	<div class="slick-slide">
+		<img class="cover-image" src="{ms:globalskin.url/}/images/1494496190_1.jpg">
+		<div class="banner-text p-5">
+			<div class='container'>
+				<div class='banner-text-con'>
+					<div>
+						<h1 style="color:;">每周精选</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<section class="met-news animsition ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 met-news-body">
+                <div class="row">
+                    <div class="met-news-list">
+                        <ul class="met-page-ajax" data-scale='0.625'>
+						{ms:arclist size=0}
+							<li class="">
+								<div class="media media-lg">
+									<div class="media-left">
+										<a href="[field.link/]?lang=cn&id=69" title="[field.title/]" target='_self'>
+											<img class="media-object" src="{ms:global.host/}[field.litpic/]" style='height:150px;' alt="[field.title/]">
+										</a>
+									</div>
+									<div class="media-body">
+										<h4 class="media-heading">
+											<a href="[field.link/]" title="[field.title/]" target='_self'>
+												[field.title/]
+											</a>
+										</h4>
+										<p class="des">[field.descrip/]</p>
+										<p class="info">
+											<span>[field.date fmt=yyyy-MM-dd/]</span>
+											<span>[field.author/]</span>
+											<span><i class="icon wb-eye margin-right-5" aria-hidden="true"></i>[field.hit/]</span>
+										</p>
+									</div>
+								</div>
+							</li>
+						 {/ms:arclist}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+					<div class="met-news-bar">
+                        <form method='get' action="">
+                            <input type='hidden' name='lang' value='cn' />
+                            <input type='hidden' name='class1' value='101' />
+                            <div class="form-group">
+                                <div class="input-search">
+                                    <button type="button" class="input-search-btn"><i class="icon wb-search" aria-hidden="true"></i></button>
+                                    <input type="text" class="form-control" name="searchword" placeholder="Search">
+                                </div>
+                            </div>
+                        </form>
+						<div class="recommend news-list-md">
+							<h3>为您推荐</h3>
+							<ul class="list-group list-group-bordered">
+								{ms:arclist typeid=59 size=3}
+								<li class="list-group-item"><a href="[field.link/]" title="[field.title/]" target='_self'>[field.title/]</a></li>
+								{/ms:arclist}
+							</ul>
+						</div>
+                        <ul class="column">
+                            <li><a href="{ms:global.url/}/59/index.html" title="所有文章" target='_self'>所有文章</a></li>
+                            {ms:channel typeid=59}
+                            <li><a href="[field.typelink/]" class="active" title="[field.typetitle/]">[field.typetitle/]</a></li>
+                            {/ms:channel}
+                        </ul>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{ms:include filename=footer.htm/}
+</body>
+</html>

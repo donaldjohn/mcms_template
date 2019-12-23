@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML>
+<html>
+    {ms:include filename=head-file.htm/}
+    <body>
+        {ms:include filename=head.htm/}
+        <!--内容开始-->
+        <div class="allpage">
+            {ms:include filename=menu.htm/}
+            <!--页头结束-->
+            <!--文章内容开始-->
+            <div class="content">
+                <div class="about">
+                    <h1>
+                        {ms:field.title/}
+                    </h1>
+                    <span class="picContent">
+                        <p>
+                            {ms:field.content/}
+                        </p>
+                    </span>
+                    <a href="{ms:global.url/}/59/index.html" title="返回列表" class="back">
+                       	 返回列表
+                    </a>
+                </div>
+            </div>
+            <!--文章内容结束-->
+            {ms:include filename=footer.htm/}
+        </div>
+        <!--内容结束-->
+    </body>
+</html>

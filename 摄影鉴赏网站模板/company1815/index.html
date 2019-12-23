@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+{ms:include filename=head-file.htm/}
+<body>
+	{ms:include filename=head.htm/}
+	<div class="usezan-video" style="height: 650px">
+		<video id="bgvideo" height="650" class="bgvideo" autoplay=autoplay
+			loop="loop">
+			<source src="http://on6zszypg.bkt.clouddn.com/RE_Timelapse_Loop_v1_BlackWash70_Med-PUMO.mp4" type="video/mp4">
+		</video>
+	</div>
+	<script type="text/javascript">
+		var _text = $(".video-intro"), _windows = $(document).width(), _height = $(
+				document).height(), _twidth = _text.width(), _theight = _text
+				.height(), _parheight = $(".usezan-video").height(), _px = "px";
+		var _texttype = "center", _textleft = "20", _texttop = "50", _a = (_windows - _twidth) / 2, _b = (_parheight - _theight) / 2;
+		if (_texttype == "center") {
+			_text.css({
+				"left" : _a + _px,
+				"top" : _b + _px
+			});
+		} else if (_texttype == "left") {
+			_text.css({
+				"left" : _textleft + _px,
+				"top" : _texttop + _px
+			});
+		} else {
+			_text.css({
+				"right" : _textleft + _px,
+				"top" : _texttop + _px
+			});
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="{ms:globalskin.url/}/css/index.css">
+	<!--  首页功能块 -->
+	<div class="index-module">
+		<!-- 关于我们 -->
+		<div class="backcolor">
+			<div class="hg80">
+			</div>
+			{ms:arclist size=1 typeid=62}
+			<div class="about_0 wow slideInUp" data-wow-delay="0.1s">
+				<div class="index_title text-center mb45">
+					<h3 class="f36 upper st">[field.title/]</h3>
+					<span class="f14">ABOUT</span>
+				</div>
+				<!-- 模板风格 -->
+				<!--  默认风格 -->
+				<div class="about-content">[field.descrip/]</div>
+				<div class="hg35"></div>
+				<a href="[field.link/]" class="ar f18 more">MORE</a>
+				<!--  /默认风格 -->
+				<!-- /模板风格 -->
+			</div>
+			{/ms:arclist}
+			<div class="clear" style="height: 80px"></div>
+			<i class="bor"></i>
+		</div>
+		<!-- /关于我们-->
+	</div>
+	<div class="index-module">
+		<!-- 作品展示 -->
+		<div class="backcolor">
+			<div class="kwidth">
+				<div class="hg80">
+				</div>
+				<div class="works_0">
+					<div class="index_title text-center mb45 wow slideInUp" data-wow-delay="0.1s">
+						<h3 class="f36 upper st" id="w">网站设计</h3>
+						<span class="f14">Photography</span>
+					</div>
+					<!-- 默认风格 -->
+					<ul class="wul105 number_3">
+						{ms:arclist typeid=62 size=6}
+						<li class="wow slideInUp" data-wow-delay="0.0s">
+							<a class="img" style="height: 244px;" rel='example_group'
+							   href='{ms:global.host/}[field.litpic/]'>
+							   	<img src="{ms:global.host/}[field.litpic/]" style="height: 244px;" alt="[field.keyword]" />
+					  		</a>
+							<div class="title">
+								<h5 class="f14 text-center pd-t15 pd-b5">
+									<a href="javascript:;">[field.title/]</a>
+								</h5>
+								<p class="f11 entitle text-center">[field.author/]</p>
+							</div></li>
+						 {/ms:arclist}
+					</ul>
+					<div class="hg50"></div>
+					<a href="{ms:global.url/}/61/index.html" class="ar f18 more wow slideInUp" data-wow-delay="0.6s">MORE</a>
+					<!-- /默认风格 -->
+				</div>
+			</div>
+			<div class="clear" style="height: 80px"></div>
+		</div>
+		<!-- /作品展示 -->
+		<link rel="stylesheet" type="text/css" href="{ms:globalskin.url/}/css/fancybox.css">
+		<script type="text/javascript" src="{ms:globalskin.url/}/js/fancybox.js"></script>
+		<script type="text/javascript">
+			//点击放大
+			$("a[rel=example_group]").fancybox();
+		</script>
+	</div>
+	<div class="index-module">
+		<!-- 卓越团队 -->
+		<div class="backcolor" style="background: #282828">
+			<div class="kwidth">
+				<div class="hg80"></div>
+				<div class="team_2 wow slideInUp" data-wow-delay="0.1s">
+					<div class="index_title text-center mb45">
+						<h3 class="f36 upper st">产品种类</h3>
+						<span class="f14">Teamour</span>
+					</div>
+					<!-- 模板风格 -->
+					<!--  风格二 -->
+					<div class="hd">
+						<a class="next"></a> <a class="prev"></a>
+					</div>
+					<div class="team_div2 bd">
+						<ul>
+							{ms:arclist typeid=106 size=6}
+							<li class="8">
+								<div class="detail">
+									<a href="javascript:;" class="imgfilter"
+										style="background: url({ms:global.host/}[field.litpic/]) no-repeat center center;"></a>
+									<h5 class="f18 pd-b10">[field.author/]</h5>
+									<span class="block">[field.typename/]</span> <i></i>
+									<p class="f11 line-height22">[field.descrip/]</p>
+								</div>
+							</li> 
+							{/ms:arclist}
+						</ul>
+					</div>
+					<!--  /风格二 -->
+					<!-- /模板风格 -->
+				</div>
+			</div>
+			<div class="clear" style="height: 35px"></div>
+		</div>
+		<link rel="stylesheet" type="text/css" href="{ms:globalskin.url/}/css/layer.css">
+		<script type="text/javascript" src="{ms:globalskin.url/}/js/layer.js"></script>
+		<!-- 团队简介 -->
+		<script type="text/javascript">
+			$(document).on("click", ".team_div2 ul li.5", function() {
+				layer.open({
+					type : 1,
+					title : false,
+					skin : 'team1', //样式类名
+					shift : 5,
+					maxWidth : '702px',
+					shadeClose : true, //开启遮罩关闭
+					content : $("#5")
+				});
+			})
+		</script>
+		<script type="text/javascript">
+			$(document).on("click", ".team_div2 ul li.4", function() {
+				layer.open({
+					type : 1,
+					title : false,
+					skin : 'team1', //样式类名
+					shift : 5,
+					maxWidth : '702px',
+					shadeClose : true, //开启遮罩关闭
+					content : $("#4")
+				});
+			})
+		</script>
+		<script type="text/javascript">
+			//滚动
+			$(".team_2").slide({
+				mainCell : ".bd ul",
+				autoPage : true,
+				effect : "left",
+				autoPlay : false,
+				vis : 3
+			});
+		</script>
+	</div>
+	<div class="index-module">
+		<!-- 合作伙伴 -->
+		<div class="backcolor">
+			<div class="kwidth">
+				<div class="hg80"></div>
+				<div class="partner_1 wow slideInUp" data-wow-delay="0.1s">
+					<div class="index_title text-center mb45">
+						<h3 class="f36 upper st">合作伙伴</h3>
+						<span class="f14">Partner</span>
+					</div>
+					<!-- 模板风格 -->
+
+					<!--  风格一 -->
+					<div class="hd">
+						<a class="next"></a> <a class="prev"></a>
+					</div>
+
+					<div class="wul105 bd">
+						<ul>
+							{ms:arclist typeid=83}
+							<li><img src="{ms:global.host/}[field.litpic/]"
+								alt="[field.keyword/]" /></li> {/ms:arclist}
+						</ul>
+					</div>
+					<!--  /风格一 -->
+
+					<!-- /模板风格 -->
+				</div>
+			</div>
+			<div class="clear" style="height: 60px"></div>
+			<i class="bor"></i>
+		</div>
+		<!-- /合作伙伴-->
+		<script type="text/javascript">
+			$(".partner_1").slide({
+				titCell : ".hd ul",
+				mainCell : ".bd ul",
+				autoPage : true,
+				effect : "left",
+				autoPlay : true,
+				vis : 5,
+				trigger : "click"
+			});
+		</script>
+	</div>
+	<div class="index-module">
+		<div class="backcolor">
+			<div class="kwidth">
+				<div class="hg80"></div>
+				<div class="news_1 wow slideInUp" data-wow-delay="0.1s">
+					<div class="index_title text-center mb45">
+						<h3 class="f36 upper ar">公司项目</h3>
+						<span class="f14">project</span>
+					</div>
+					<!-- 	模板风格
+					 风格一 -->
+					<div class="wul110">
+						<ul>
+							{ms:arclist typeid=59 size=3}
+							<li class="wow slideInUp" data-wow-delay="0.0s">
+								<div class="news-detail">
+									<a href="[field.link/]" class="imgnews"><img src="{ms:global.host/}[field.litpic/]" alt="[field.title/]" /></a>
+									<div class="news-data fl">
+										<span class="md f22 ar pd-t15">09</span> 
+										<span class="y ar">Feb 2016</span>
+									</div>
+									<div class="remark fr">
+										<h5 class="pd-t8 pd-b5">
+											<a class="f14" title="[field.title/]" href="[field.link/]">[field.title/]</a>
+										</h5>
+										<p class="line-height18">[field.descrip/]</p>
+										<a href="[field.link/]" class="news-more mt15"></a>
+									</div>
+								</div>
+							</li> 
+							{/ms:arclist}
+						</ul>
+					</div>
+					<div class="hg50"></div>
+					<a href="{ms:global.url/}/61/index.html" class="ar f18 more wow slideInUp" data-wow-delay="0.3s">MORE</a>
+				</div>
+			</div>
+			<div class="clear" style="height: 80px"></div>
+			<i class="bor"></i>
+		</div>
+	</div>
+	<div class="index-module">
+		<a name="feedback"></a>
+		<div class="backcolor">
+			<div class="kwidth">
+				<div class="hg80"></div>
+				<div class="contact_0 wow slideInUp" data-wow-delay="0.1s">
+					<div class="index_title text-center mb45">
+						<h3 class="f36 upper ar">联系我们</h3>
+						<span class="f14">contact</span>
+					</div>
+					<div class="wul105 bd">
+						<ul>
+							<li><i></i>
+								<h5 class="f14 pd-t8">公司地址</h5>
+								<p>景德镇昌江区</p></li>
+							<li><i></i>
+								<h5 class="f14 pd-t8">联系电话</h5>
+								<p>020-2002000</p></li>
+							<li><i></i>
+								<h5 class="f14 pd-t8">电子邮箱</h5>
+								<p>1234789@163.com</p></li>
+						</ul>
+					</div>
+					<div class="hd clear">
+						<ul></ul>
+					</div>
+					<div class="hg60"></div>
+					<div>
+						<div class="form-action">
+							<form name="myform" id="myform"
+								action="/index.php?g=User&m=Post&a=insert" method="post">
+								<li>
+									<input type="text" name="username" placeholder="您的姓名"
+									datatype="z2-4" nullmsg="请填写姓名" errormsg="姓名长度为2-5个中文">
+								</li>
+								<li>
+									<input type="text" name="email" placeholder="电子邮箱"
+									datatype="email" nullmsg="请填写电子邮箱" errormsg="电子邮箱格式错误">
+								</li>
+								<li>
+									<input type="text" name="telephone" placeholder="联系方式"
+									datatype="m-s" nullmsg="请填写手机" errormsg="手机号码格式错误">
+								</li>
+								<li class="textarea">
+									<textarea name="content"
+										placeholder="留言内容" datatype="*5-255" nullmsg="请填写详细内容"
+										errormsg="详细内容长度为10-2000个字符">
+									</textarea>
+								</li> 
+								<span class="j_form_tips"></span>
+								<div class="hg35"></div>
+								<input type="hidden" id="catid" name="catid" value="19" /> 
+								<input type="hidden" id="catid" name="moduleid" value="8" />
+								<input type="hidden" name="title" value="客户留言" />
+								<input type="hidden" name="lang" value="" />
+								<input type="submit" class="ar f18" value="SUBMIT">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear" style="height: 80px"></div>
+		</div>
+		<!-- /联系我们-->
+		<link rel="stylesheet" href="{ms:globalskin.url/}/css/validform.css" type="text/css" />
+		<script type="text/javascript" src="{ms:globalskin.url/}/js/validform.js"></script>
+		<script type="text/javascript" src="{ms:globalskin.url/}/js/datatype.js"></script>
+		<script type="text/javascript">
+			//切换
+			// $(".contact_0").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:false,vis:3,trigger:"click"});
+			//表单
+			$("#myform").Validform(
+					{
+						ajaxPost : true,
+						ignoreHidden : true,
+						datatype : {
+							"z2-4" : /^[\u4e00-\u9fa5]{2,5}$/,
+							"m-s" : /^1[3|5|7|8|][0-9]{9}$/
+						},
+						tiptype : function(msg, o, cssctl) {
+							var objtip = $(".j_form_tips");
+							cssctl(objtip, o.type);
+							objtip.html(msg);
+						},
+						callback : function(data) {
+							if (data.status) {
+								$(".j_form_tips")
+										.removeClass("Validform_wrong")
+										.addClass("Validform_right");
+							}
+						}
+					});
+		</script>
+	</div>
+	<div class="index-module"></div>
+	<!--  /首页功能块 -->
+	{ms:include filename=footer.htm/}
+</body>
+</html>

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		{ms:include filename=head-file.htm/}
+	</head>
+	<body>
+		{ms:include filename=head.htm/} {ms:include filename=head-banner.htm/}
+		<h3 class="title">{ms:field.typetitle type=top/}</h3>
+		<div class="clear"></div>
+		<div class="active" id="sidebar" data-csnow="14" data-class3="0" data-jsok="2">
+			{ms:channel typeid=106}
+			<dl class="list-none navnow"><dt id='part2_10'><a href='[field.typelink/]'  title='[field.typetitle/]' class="zm"><span>[field.typetitle/]</span></a></dt></dl>
+			{/ms:channel}
+			<dl class="list-none navnow"><dt id='part2_26'><a href='{ms:global.url/}/19/141/index.html'  title='联系我们' class="zm"><span>联系我们</span></a></dt></dl>
+			<div class="clear"></div>
+		</div>
+		<div class="boutt"></div>
+		<div class="clear"></div>
+		</div>
+		<div class="sb_box">
+			{ms:include filename=current-position.htm/}
+			<div class="active" id="showproduct">
+				<h1 class='title'>{ms:field.title/}</h1>
+				<dl class='pshow'>
+					<dt style="_width:565px;">
+						<span class='info_img' id='imgqwe'><a href='{ms:global.host/}{ms:field.litpic/}' title=查看大图 target='_blank'>
+							<img src="{ms:global.host/}{ms:field.litpic/}" alt='瑞塔' title='瑞塔' width='565px' height='280px'/></a>
+						</span>
+						<script src='{ms:globalskin.url/}js/metzoom.js' language='JavaScript' type='text/javascript'></script>
+						<script src='{ms:globalskin.url/}js/metzoomhtml.js' language='JavaScript' type='text/javascript'></script>
+						<script type='text/javascript'>	window.onload==setupZoom();	</script>
+					</dt>
+					<dd>
+						<ul class="list-none">
+							<li><span>作者</span>{ms:field.author/}
+								<div style="clear:both;"></div>
+							</li>
+
+							<li><span>来源</span>{ms:field.source/}
+								<div style="clear:both;"></div>
+							</li>
+
+							<li><span>点击数</span>{ms:field.hit/}
+								<div style="clear:both;"></div>
+							</li>
+
+							<li><span>时间</span>{ms:field.date fmt=yyyy-MM-dd/}
+								<div style="clear:both;"></div>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<div style="clear:both;"></div>
+				<h3 class="ctitle"><span>详细描述</span><div class="clear"></div></h3>
+				<div class="editor">
+					{ms:field.content/}
+					<div class="clear"></div>
+				</div>
+				<div class="met_hits">
+					<div class='metjiathis'>
+						<div class="jiathis_style">
+							<!--<span class="jiathis_txt">分享到：</span>-->
+							<a class="jiathis_button_icons_1"></a>
+							<a class="jiathis_button_icons_2"></a>
+							<a class="jiathis_button_icons_3"></a>
+							<a class="jiathis_button_icons_4"></a>
+						</div>
+						<!--<script type="text/javascript" src="{ms:globalskin.url/}js/jia.js" charset="utf-8"></script>-->
+					</div>点击次数：<span>{ms:field.hit/}</span>&nbsp;&nbsp;更新时间：{ms:field.date fmt=yyyy-MM-dd hh:mm:ss/}&nbsp;&nbsp;【
+					<a href="javascript:window.print()">打印此页</a>】&nbsp;&nbsp;【
+					<a href="javascript:self.close()">关闭</a>】</div>
+				<div class="met_page">上一条：
+					<a href="{ms:field.nextlink/}">{ms:field.nexttitle/}</a>&nbsp;&nbsp;下一条：
+					<a href="{ms:field.prelink/}">{ms:field.pretitle/}</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		</div>
+		{ms:include filename=footer.htm/}
+	</body>
+</html>

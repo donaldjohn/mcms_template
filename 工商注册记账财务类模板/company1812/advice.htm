@@ -1,0 +1,132 @@
+﻿<!doctype html>
+<html>
+	{ms:include filename=head-file.htm/}
+	<body>
+	{ms:include filename=head.htm/}
+		{ms:include filename=menu.htm/}
+    <div class="product sub_pro">
+        <!--left-->
+        <!--left end-->
+        <div class="product03">
+            <div class="content_com_title">
+                <h2>
+					{ms:field.typetitle/}
+                </h2>
+                <div class="bread">当前位置：
+					<a href='{ms:global.host/}'>主页</a>>
+					<a href='{ms:field.typelink/}'>{ms:field.typetitle/}</a>
+				</div>
+            </div>
+            <div class="content">
+                <form action="" enctype="multipart/form-data" method="post">
+                    <input type="hidden" name="action" value="post" />
+                    <input type="hidden" name="diyid" value="1" />
+                    <input type="hidden" name="do" value="2" />
+                    <ul class="msg_ul">
+                        <li>
+                            <p>
+                               	 姓名
+                                <span>
+                                    *
+                                </span>
+                            </p>
+                            <input name="name" type="text" id="name" class="msg_input" />
+                            <div class="info">
+                                <span class="Validform_checktip">
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>
+                               	 手机号码
+                                <span>
+                                    *
+                                </span>
+                            </p>
+                            <input name="tel" type="text" id="tel" class="msg_input" />
+                            <div class="info">
+                                <span class="Validform_checktip">
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>
+                                Email
+                                <span>
+                                    *
+                                </span>
+                            </p>
+                            <input name="email" type="text" id="email" class="msg_input" />
+                            <div class="info">
+                                <span class="Validform_checktip">
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>
+                                	留言
+                                <span>
+                                    *
+                                </span>
+                            </p>
+                            <textarea name="content" id="content" class="msg_textarea">
+                            </textarea>
+                            <div class="info">
+                                <span class="Validform_checktip">
+                                </span>
+                            </div>
+                        </li>
+                        <input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;content,text"
+                        />
+                        <input type="hidden" name="dede_fieldshash" value="f2737eb14ddce24d851552bf7cecbd49"
+                        />
+                        <li>
+                            <p>
+                            </p>
+                            <input type="button" class="msg_submit the/me_color" title="提   交" value="提   交"
+                            / id="tj">
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+   {ms:include filename=footer.htm/}
+    <script>
+        $(function() {
+            $('#tj').click(function() {
+                //alert(1)
+                if ($('#name').val() == '') {
+                    alert('请输入您的姓名！');
+                    return false;
+                }
+                if ($("#tel").val() == "") {
+                    alert("请输入你的手机！");
+                    $("#tel").focus();
+                    return false;
+                }
+                if (!$("#tel").val().match(/^(((13[0-9]{1})|147|150|151|152|153|154|155|156|158|157|159|170|180|181|182|183|184|185|186|187|188|189)+\d{8})$/)) {
+                    alert("手机号码格式不正确！");
+                    $("#tel").focus();
+                    return false;
+                }
+                if ($("#email").val() == "") {
+                    alert("请输入电子邮箱!");
+                    return false;
+                }
+                if (!$("#email").val().match(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)) {
+                    alert("电子邮箱格式不正确");
+                    $("#email").focus();
+                    return false;
+                }
+                if ($('#content').val() == '') {
+                    alert('请输入留言内容！');
+                    return false;
+                }
+            })
+        })
+    </script>
+    </body>
+</html>

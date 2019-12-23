@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		{ms:include filename=headFile.htm/}
+	</head>
+	<body>
+		{ms:include filename=header.htm/}
+		<div class="banner2">
+			<div class="container">
+				<h1>产品中心</h1>
+				<p></p>
+			</div>
+		</div>
+		<script>
+			//<!CDATA[
+			var bodyBgs = [];
+			bodyBgs[0] = "{ms:globalskin.url/}/images/s1.jpg";
+			bodyBgs[1] = "{ms:globalskin.url/}/images/s2.jpg";
+			bodyBgs[2] = "{ms:globalskin.url/}/images/s3.jpg";
+			bodyBgs[3] = "{ms:globalskin.url/}/images/s4.jpg";
+			bodyBgs[4] = "{ms:globalskin.url/}/images/s5.jpg";
+			var randomBgIndex = Math.round(Math.random() * 4);
+			//输出随机的背景图
+			document.write('<style>.banner{background:url(' + bodyBgs[randomBgIndex] + ') no-repeat 50% bottom}</style>');
+			//]]>
+		</script>
+		<!-- 面包屑导航开始 -->
+		<div class="mianbao">
+			<div class="container">
+				<a title="主页" href="{ms:global.host/}">主页</a>
+				&gt;&gt;
+				<a title="{ms:field.typetitle/}" href="{ms:field.typelink/}">{ms:field.typetitle/}</a>
+			</div>
+		</div>
+		<div class="box2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9 box2-left">
+						<div class="title20">
+							<h3>产品中心</h3>
+						</div>
+						<div class="row">
+							{ms:arclist size=6 ispaging=true}
+							<div class="col-sm-4 ">
+								<div class="list-pic20">
+									<a class="img-auto" href="[field.link/]"><img alt="[field.title/]" src="{ms:global.host/}[field.litpic/]" onerror='this.src="/images/nopic.gif"' style="width:240px;height:190px;" /></a>
+									<h3><a href="[field.link/]">[field.title/]</a></h3>
+									<p>[field.descrip/]</p>
+									<span>作者：[field.author/]</span>
+								</div>
+							</div>
+							{/ms:arclist}
+						</div>
+						<nav>
+							<ul class="pagination">
+								<li>
+									<a href="{ms:page.index/}">首页</a>
+								</li>
+								<li>
+									<a href="{ms:page.pre/}">上一页</a>
+								</li>
+								<li>
+									<a href="{ms:page.next/}">下一页</a>
+								</li>
+								<li>
+									<a href="{ms:page.last/}">末页</a>
+								</li>
+								<li><span>共{ms:page.total/}页</span></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- /col-sm-8 -->
+					<div class="col-md-3 box2-right hidden-sm hidden-xs">
+						<div class="right1">
+							<form name='search' action="#" method="post">
+								<div class="input-group">
+									<input type="text" name="keyword" class="form-control">
+									<span class="input-group-btn">
+										<button  name='button' type="button" class="btn btn-primary" >搜索</button>
+									</span>
+								</div>
+								<!-- /input-group -->
+							</form>
+						</div>
+						<!--只展开当前栏目所在一级栏目下的分类-->
+						<div class="right2">
+							<h2>产品中心</h2>
+							<ul>
+								{ms:channel typeid=106}
+								<li>
+									<a title="[field.typetitle/]" href="[field.typelink/]">[field.typetitle/]</a>
+								</li>
+								{/ms:channel}
+							</ul>/
+							<!--只展开当前栏目所在一级栏目下的分类-->
+						</div>
+						{ms:include filename=menu-right.htm/}
+					</div>
+					<!-- col-sm-4 -->
+				</div>
+				<!-- /row -->
+			</div>
+			<div class="blank30"></div>
+			<!-- 内容列表分页开始 -->
+			<!-- /container -->
+		</div>
+		<!-- /box2 -->
+		{ms:include filename=footer.htm/}
+	</body>
+</html>

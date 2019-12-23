@@ -1,0 +1,181 @@
+﻿<!doctype html>
+<html>
+	{ms:include filename=head-file.htm/}
+	<body>
+	{ms:include filename=head.htm/}
+	<style>
+	.index_case01 dl dt img{
+		width: 314px;
+	}
+	.index_news03 dl{
+		height: 110px;
+	}
+	</style>
+		<div id="slideBox" class="slideBox">
+			<div class="hd">
+				<ul>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</div>
+			<div class="bd">
+				<ul>
+					<li>
+						<a style="background:url({ms:globalskin.url/}images/1-1p123140415641.jpg) no-repeat top center;"></a>
+					</li>
+					<li>
+						<a style="background:url({ms:globalskin.url/}images/1-1p124103k2l7.png) no-repeat top center;"></a>
+					</li>
+					<li>
+						<a style="background:url({ms:globalskin.url/}images/1-1p124103606247.jpg) no-repeat top center;"></a>
+					</li>
+				</ul>
+			</div>
+			<a class="prev" href="javascript:void(0)"></a>
+			<a class="next" href="javascript:void(0)"></a>
+		</div>
+		<script type="text/javascript">$(function() {
+				jQuery(".slideBox").slide({
+					mainCell: ".bd ul",
+					autoPlay: true
+				}); //banner
+				jQuery(".slideBox02").slide({
+					mainCell: ".bd02 ul",
+					effect: "left",
+					autoPlay: true,
+					trigger: "click"
+				}); //shouye banji
+			});</script>
+		<!--banner end-->
+		<!--notice-->
+		<div class="notice">
+			<div class="notice01">
+				<div class="notice02">通知公告：
+					<span>该模版由铭飞科技制作分享：http://ms.mingsoft.net/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系QQ：942770163</span></div>
+				<div class="notice03">
+					<form name="formsearch" action="">
+						<input type="hidden" name="kwtype" value="0" />
+						<div class="search02">
+							<input name="q" type="text" class="search03" placeholder="请输入搜索关键词" /></div>
+						<div class="search02">
+							<input name="submit" type="button" class="search04" value="" /></div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="{ms:globalskin.url/}js/jquery.nicescroll.js"></script>
+		<script>$(".index_yw03").niceScroll({
+				cursorcolor: "#c02626",
+				cursoropacitymax: 1,
+				touchbehavior: false,
+				cursorwidth: "4",
+				cursorborder: "4",
+				cursorborderradius: "4"
+			});</script>
+		<div class="clear"></div>
+		<div class="index_case" style="background-image:url({ms:globalskin.url/}images/case.jpg);background-repeat:no-repeat; background-position:top center;">
+			<!---->
+			<div class="index_case02">
+				<div class="index_case03">
+					<strong>产品展示</strong>
+					<br />
+					<img src="{ms:globalskin.url/}images/case05.png" alt="" />
+					<span>Product</span></div>
+				<!--滚动开始-->
+				<div class="partFourM">
+					<div class="partFourCon" id="ScrollBox">
+						<ul class="pro">
+						{ms:arclist typeid=106}
+							<li>
+								<div class="index_case01">
+									<a href="[field.link/]">
+										<div class="index_case010000">
+											<img src="{ms:globalskin.url/}images/case10.png" />
+											<br />查看详情</div></a>
+									<dl>
+										<a href="[field.link/]">
+											<dt>
+												<img src="{ms:global.host/}[field.litpic/]" height="232" alt="产品名称六" /></dt>
+											<dd>[field.title/]</dd></a>
+									</dl>
+								</div>
+							</li>
+						{/ms:arclist}	
+						</ul>
+					</div>
+				</div>
+				<script type="text/javascript" src="{ms:globalskin.url/}js/index_brand.js"></script>
+				<!--滚动开始 end--></div>
+			<div class="index_case04">
+				<a href="{ms:global.url/}/106/index.html" title="— 查看更多 —">— 查看更多 —</a></div>
+			<!---->
+			<script language="javascript">$(function() {
+					$(".index_case01").hover(function() {
+						$(this).find(".index_case010000").fadeIn(300);
+					},
+					function() {
+						$(this).find(".index_case010000").fadeOut(300);
+					});
+				});</script>
+		</div>
+		<div class="clear"></div>
+		<div class="index_news" style="background-image:url({ms:globalskin.url/}images/news.jpg);background-repeat:no-repeat; background-position:top center;">
+			<!---->
+			<div class="index_news01">
+				<div class="index_news02">
+					<strong>新闻资讯</strong>
+					<br />
+					<img src="{ms:globalskin.url/}images/news02.png" alt="" />
+					<span>NEWS</span></div>
+				<div class="index_news03">
+					{ms:arclist typeid=59 size=3}
+					<dl onclick="window.open('[field.link/]');">
+						<dt>[field.date fmt=MM-dd/]</dt>
+						<dd>
+							<span>[field.title/]</span><div>[field.descrip/]</div>
+						</dd>
+					</dl>
+					{/ms:arclist}
+				</div>
+			</div>
+			<div class="index_news04">
+				<a href="{ms:global.url/}/59/index.html" title="— 查看更多 —">— 查看更多 —</a></div>
+			<!----></div>
+		<div class="clear"></div>
+		<div class="index_zixun" style="background-image:url({ms:globalskin.url/}images/a.jpg);background-repeat:no-repeat; background-position:top center;">
+			<!--关于我们-->
+			<div class="index_zixun01">
+				<div class="index_zixun02">服务热线：
+					<span>4000-000-000</span>
+					<div class="index_zixun03">
+						<a href="{ms:global.url/}/19/142/index.html" title="在线留言">在线留言</a></div>
+				</div>
+			</div>
+			<!--关于我们 end--></div>
+		<div class="clear"></div>
+		<div class="index_gy" style="background-image:url({ms:globalskin.url/}images/about.jpg);background-repeat:no-repeat; background-position:top center;">
+			<!--关于我们-->
+			<div class="index_gy01">
+				<div class="index_gy01">
+					{ms:arclist typeid=53 size=1}
+					<div class="index_gy02">
+						<div class="index_gy03">
+							<strong>ABOUT</strong>
+							<span>[field.title/]</span></div>
+						<div class="index_gy04">[field.descrip/]</div>
+						<div class="index_gy05">
+							<a href="[field.link/]" title="查看详情">查看详情</a>
+						</div>
+					</div>
+					{/ms:arclist}
+					<div class="index_gy06">
+						<img src="{ms:globalskin.url/}images/b.png" width="346" height="294" alt="关于我们" /></div>
+				</div>
+			</div>
+			<!--关于我们 end-->
+		</div>
+		<div class="clear"></div>
+		{ms:include filename=footer.htm/}
+	</body>
+</html>

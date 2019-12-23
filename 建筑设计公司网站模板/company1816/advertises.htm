@@ -1,0 +1,87 @@
+﻿<!DOCTYPE HTML>
+<!-- 招聘146 -->
+<html>
+{ms:include filename=head-file.htm/}
+<body class="met-navfixed">
+	<!--[if lte IE 8]>
+	<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+	<p class="browserupgrade font-size-18">你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。</p>
+	</div>
+<![endif]-->
+	{ms:include filename=head.htm/}
+	<div class="met-banner " data-height='300||'>
+		<div class="slick-slide">
+			<img class="cover-image" src="{ms:globalskin.url/}/images/1494496190_1.jpg">
+			<div class="banner-text p-5">
+				<div class='container'>
+					<div class='banner-text-con'>
+						<div>
+							<h1 style="color:;">招聘信息</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="met-job animsition">
+		<div class="container">
+			<div class="row">
+				<div class="met-job-list met-page-ajax">
+					{ms:arclist typeid=62 size=2}
+					<div class="widget widget-article widget-shadow">
+						<div class="widget-body">
+							<h3 class="widget-title">[field.title/]</h3>
+							<p class="widget-metas">
+								<span>[field.date fmt=yyyy-MM-dd/]</span> 
+								<span><i class="icon wb-map margin-right-5" aria-hidden="true"></i>[field.source/]</span> 
+								<span><i class="icon wb-user margin-right-5" aria-hidden="true"></i>{ms:field.hit/}</span> 
+								<span><i class="icon wb-payment margin-right-5" aria-hidden="true"></i>[field.typeid/]</span>
+							</p>
+							<hr>
+							<div class="met-editor lazyload clearfix">
+								<div class="container" if="{notEmpty}" jinkela-class="10"
+									style="width: 1110px; margin-top: 40px; margin-bottom: auto; padding: 0px 70px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial,&amp; quot; Microsoft YaHei&amp;quot; , &amp; quot; Hiragino Sans GB&amp;quot; , &amp; quot; WenQuanYi Micro Hei&amp;quot; , sans-serif; font-size: medium; white-space: normal;">
+									<h3 style="margin: 0px; padding-left: 8px; font-size: 20px; line-height: 20px; color: rgb(76, 76, 76); border-left: 4px solid rgb(28, 160, 252);">工作职责</h3>
+									<ul ref="ul"
+										style="margin-top: 16px; padding: 0px; color: rgb(102, 102, 102);"
+										class=" list-paddingleft-2">
+										<li>
+											<p>[field.descrip/]</p>
+										</li>
+									</ul>
+								</div>
+								<div class="container" if="{notEmpty}" jinkela-class="11"
+									style="width: 1110px; margin-top: 40px; margin-bottom: auto; padding: 0px 70px; color: rgb(0, 0, 0); font-family: Helvetica, Tahoma, Arial,&amp; quot; Microsoft YaHei&amp;quot; , &amp; quot; Hiragino Sans GB&amp;quot; , &amp; quot; WenQuanYi Micro Hei&amp;quot; , sans-serif; font-size: medium; white-space: normal;">
+									<h3	style="margin: 0px; padding-left: 8px; font-size: 20px; line-height: 20px; color: rgb(76, 76, 76); border-left: 4px solid rgb(28, 160, 252);">职责要求</h3>
+									<ul ref="ul"
+										style="margin-top: 16px; padding: 0px; color: rgb(102, 102, 102);"
+										class=" list-paddingleft-2">
+										<li>
+											<p>[field.descrip/]</p>
+										</li>
+									</ul>
+								</div>
+								<p>
+									<br />
+								</p>
+							</div>
+							<hr>
+						</div>
+					</div>
+					{/ms:arclist}
+				</div>
+				<div class="hidden-xs">
+					<div class='met_pager'>
+						<span class='PreSpan'>上一页</span>
+						<a href="{ms:field.prelink/}" class='Ahover'>1</a>
+						<span class='NextSpan'>下一页</span>
+						<span class='PageText'>转至第</span> 
+						<input type='text' id='metPageT' data-pageurl='job.php?lang=cn&page=||1' value='1' /> <input type='button' id='metPageB' value='页' />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	{ms:include filename=footer.htm/}
+</body>
+</html>

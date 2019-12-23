@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+	{ms:include filename=headFile.htm/}>
+	<body>
+		{ms:include filename=header.htm/} 
+		{ms:include filename=nav.htm/}
+		<!-- 面包屑导航开始 -->
+		<div class="container ">
+			<nav class="sub_menu">
+				<ol class="breadcrumb"><span class="glyphicon glyphicon-list"></span>
+					<li>
+						<a href="{ms:global.host/}">网站首页</a>
+					</li>
+					<li>
+						<a title="产品列表" href="{ms:global.url/}/106/index.html">产品列表</a>
+					</li>
+				</ol>
+			</nav>
+		</div>
+		<!--/sub_menu-->
+		<!-- 面包屑导航结束 -->
+		<!-- 中部开始 -->
+		<div class="container list-container">
+			<div class="row">
+				<div class="col-md-12">
+					<!-- 内容列表开始 -->
+					{ms:arclist typeid=106 size=6 ispaging=true}
+					<div class="row list-down">						
+						<div class="col-sm-3">
+							<a title="[field.title/]" target="_blank" href="[field.link/]" class="img-auto"><img alt="[field.title/]" src="{ms:global.host/}[field.litpic/]" style="height: 200px;width: 250px;" class="img-responsive"></a>
+						</div>
+						<div class="col-sm-9">
+							<h4><a title="[field.title/]" href="[field.link/]" target="_blank" >[field.title/]</a></h4>
+							<p>[field.descrip/]
+								<a href="[field.link/]" target="_blank">[了解更多]</a>
+							</p>
+						</div>
+					</div>
+					{/ms:arclist}
+					<!-- 内容列表结束 -->
+					<div class="blank30"></div>
+					<!-- 内容列表分页开始 -->
+					<nav>
+						<ul class="pagination">
+							 <li><a href="{ms:page.pre/}" style="width: 100px;">上一页</a></li>  
+	                         <li><a href="{ms:page.next/}" style="width: 100px;">下一页</a></li>
+						</ul>
+					</nav>
+					<!-- 内容列表分页结束 -->
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+		<div class="blank30"></div>
+		<!-- 页底推荐图文产品开始 -->
+		<!-- 页底推荐图文产品结束 -->
+		<div class="clearfix"></div>
+		<!--foot -->
+		{ms:include filename=footer.htm/}
+  </body>
+</html>

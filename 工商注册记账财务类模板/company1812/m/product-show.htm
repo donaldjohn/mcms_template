@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML>
+<html>
+    {ms:include filename=head-file.htm/}
+    <body>
+        {ms:include filename=head.htm/}
+        <!--内容开始-->
+        <div class="allpage">
+            {ms:include filename=menu.htm/}
+            <!--页头结束-->
+            <!--文章内容开始-->
+            <div class="content">
+                <div class="about">
+                    <h1>
+                       	 {ms:field.title/}
+                    </h1>
+                    <span class="picContent">
+                        <p>
+                            <div style="margin: 0px; padding: 0px; border: 0px; color: rgb(85, 85, 85); font-family: Simsun; font-size: 14px; line-height: 28px; text-align: center;">
+                                <img alt="" original="{ms:global.host/}{ms:field.litpic/}" src="{ms:global.host/}{ms:field.litpic/}"
+                                style="border: 0px;" />
+                                <br />
+                            </div>
+                            {ms:field.content/}
+                        </p>
+                    </span>
+                    <a href="{ms:global.url/}/106/index.html" title="返回列表" class="back">
+                       	 返回列表
+                    </a>
+                </div>
+            </div>
+            <!--文章内容结束-->
+            {ms:include filename=footer.htm/}
+        </div>
+        <!--内容结束-->
+    </body>
+</html>

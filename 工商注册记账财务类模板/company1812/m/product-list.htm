@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML>
+<html>
+    {ms:include filename=head-file.htm/}
+    <style>
+    .news4 a img{
+    	height: 1.8rem;
+    }
+    </style>
+    <body>
+        {ms:include filename=head.htm/}
+        <!--内容开始-->
+        <div class="allpage">
+            {ms:include filename=menu.htm/}
+            <!--图片列表开始-->
+            <div class="content">
+                <ul class="list-loop common_news" id="contentArea">
+                	{ms:arclist ispaging=true}	
+                    <li class="loop news4">
+                        <a href="[field.link/]" title="[field.title/]">
+                            <img src="{ms:global.host/}[field.litpic/]" alt="[field.title/]">
+                            <span>
+                               	 [field.title/]
+                            </span>
+                        </a>
+                    </li>
+                    {/ms:arclist}
+                </ul>
+                <div class="pages">
+                    <li>
+                        <span class="pageinfo">
+                           	 共 {ms:page.total/} 页/{ms:page.rcount/} 条记录
+                        </span>
+                    </li>
+                </div>
+            </div>
+            <!--图片列表结束-->
+            {ms:include filename=footer.htm/}
+        </div>
+        <!--内容结束-->
+    </body>
+</html>

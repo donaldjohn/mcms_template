@@ -1,0 +1,48 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		{ms:include filename=head-file.htm/}
+	</head>
+	<body>
+		{ms:include filename=head.htm/} {ms:include filename=head-banner.htm/}
+		<h3 class="title">{ms:field.typetitle type=top/}</h3>
+		<div class="clear"></div>
+		<div class="active" id="sidebar" data-csnow="21" data-class3="0" data-jsok="2">
+			{ms:channel typeid=59}
+			<dl class="list-none navnow"><dt id='part2_10'><a href='[field.typelink/]'  title='[field.typetitle/]' class="zm"><span>[field.typetitle/]</span></a></dt></dl>
+			{/ms:channel}
+			<dl class="list-none navnow"><dt id='part2_28'><a href='{ms:global.url/}/19/141/index.html'  title='联系我们' class="zm"><span>联系我们</span></a></dt></dl>
+			<div class="clear"></div>
+		</div>
+		<div class="boutt"></div>
+		<div class="clear"></div>
+		</div>
+		<div class="sb_box">
+			{ms:include filename=current-position.htm/}
+			<div class="active" id="newslist">
+				<ul class='list-none metlist'>
+					{ms:arclist ispaging=true size=8}
+					<li class='list top'><span>[[field.date fmt=/]]</span>
+						<a href='[field.link/]' title='[field.title/]' target='_self'>[field.title/]</a>
+						<p>[field.descrip/]</p>
+					</li>
+					{/ms:arclist}
+				</ul>
+				<div id="flip">
+					<div class='digg4 metpager_8'>
+						<b><a href="{ms:page.index/}">«</a></b>
+						<a href="{ms:page.pre/}">‹</a>
+						<span class='current'>
+							{ms:page.cur/}
+						</span>
+						<a href="{ms:page.next/}">›</a>
+						<b><a href="{ms:page.last/}">»</a></b>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		</div>
+		{ms:include filename=footer.htm/}
+	</body>
+</html>

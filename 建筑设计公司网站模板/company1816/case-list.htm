@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+{ms:include filename=head-file.htm/}
+<body class="met-navfixed">
+	<!--[if lte IE 8]>
+	<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+	<p class="browserupgrade font-size-18">你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。</p>
+	</div>
+<![endif]-->
+	{ms:include filename=head.htm/}
+	<div class="met-banner " data-height='300||'>
+		<div class="slick-slide">
+			<img class="cover-image" src="{ms:globalskin.url/}/images/1494496190_1.jpg">
+			<div class="banner-text p-5">
+				<div class='container'>
+					<div class='banner-text-con'>
+						<div>
+							<h1 style="color:;">所有专题</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="met-news animsition ">
+		<div class="container">
+			<div class="row">
+				<ul
+					class="service_list blocks-100 blocks-sm-2 blocks-md-3 blocks-xlg-3  clearfix">
+					{ms:arclist}
+					<li class="service_item">
+						<a href="[field.link/]" title="[field.title/]"
+						target='_self'> <img src="{ms:global.host/}[field.litpic/]" alt="[field.title/]">
+						<h4>[field.title/]</h4>
+						<p>[field.descrip/]</p>
+						</a>
+					</li>
+				 	{/ms:arclist}
+				</ul>
+			</div>
+		</div>
+	</section>
+	{ms:include filename=footer.htm/}
+</body>
+</html>

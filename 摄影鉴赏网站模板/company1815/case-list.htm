@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+{ms:include filename=head-file.htm/}
+<body>
+	{ms:include filename=head.htm/}
+	<div class="nbanner" style="display: none;"></div>
+	<!-- 内容开始 -->
+	<div class="n-back-0">
+		<div class="kwidth">
+			{ms:include filename=nav-menu.htm/}
+			<!-- 左侧内容 -->
+			<div class="kwidth">
+				<div class="content_left fl wow slideInUp">
+					<div class="sector_content n-back-1 mb20">
+						<div class="sector_content n-back-1 mb20">
+							<div class="sector_head">
+								<h3>客户案例</h3>
+							</div>
+							<div class="detail-content">
+								<ul class="wul105 partnerpic cw">
+								{ms:arclist typeid=61 size=6 ispaging=true}
+									<li>
+										<a><img id="cw" src="{ms:global.host/}[field.litpic/]" alt="[field.typename/]" /></a>
+										<p class="text-center">[field.title/]</p>
+									</li>
+								{/ms:arclist}
+								</ul>
+								<div class="hg20"></div>
+							</div>
+						</div>
+					</div>
+					<div id="pages" class="page">
+						<a class="a1">一共有<font>{ms:page.total/}</font>个</a>
+						<a class="cur" href="{ms:page.pre/}">上一页</a>
+						<a href="{ms:page.next/}">下一页</a>
+					</div>
+				</div>
+				<!-- /左侧内容 -->
+				<!-- 右侧内容 -->
+				<div class="content_right fr wow slideInUp" data-wow-delay="0.1s">
+					<div class="recommend_pro mb20 pd-b10 n-back-1">
+						<h3 class="f14 pd-l15 n-bor-b">资讯</h3>
+						<a href="{ms:global.url/}/62/index.html	">
+						<img src="{ms:globalskin.url/}images/579b25caf121c.jpg" alt="关于我们的摄影" />
+						</a>
+						<p></p>
+					</div>
+					<div class="recommend_news n-back-1">
+						<h3 class="f14 pd-l15 n-bor-b">热门新闻</h3>
+						<ul>
+							{ms:arclist typeid=61 size=3}
+							<li><a href="[field.link/]">[field.title/]</a>
+								<span class="f11 block pd-t5 pd-b5">[field.date fmt=yyyy-MM-dd/]</span>
+								<p class="f11 line-height18">[field.descrip/]</p>
+							</li>
+						    {/ms:arclist}
+						</ul>
+					</div>
+				</div>
+				<!-- 右侧内容 -->
+				<div class="hg20"></div>
+			</div>
+		</div>
+	</div>
+	<!-- 内容开始 -->
+	<!-- footer -->
+	{ms:include filename=footer.htm/}
+	<!-- /footer -->
+</body>
+</html>
+<!-- /合作伙伴列表 -->
+<script>
+	$(function(){
+		var r=location.href;
+		if(r.match("61")){
+			$(".subcate ul li").find("a").removeClass('on');
+			$(".subcate ul li:eq(4)").find("a").addClass("on");
+		}
+	})
+</script>
+

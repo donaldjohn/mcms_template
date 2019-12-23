@@ -1,0 +1,101 @@
+<!-- Footer-section -->
+<div class="footer-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="footer-contact-box">
+					<h2>联系我们</h2>
+					<div class="contact-icon">
+						<i class="iconfont">&#xe8c0;</i>
+						<p>企业股份有限公司</p>
+					</div>
+					<div class="contact-icon">
+						<i class="glyphicon glyphicon-envelope"></i>
+						<p>admin@admin.com</p>
+					</div>
+					<div class="contact-icon">
+						<i class="iconfont">&#xe878;</i>
+						<p>400-40004000</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-md-offset-1 col-md-3">
+				<div class="footer-widget">
+					<h2><a href="{ms:global.url/}/53/index.html">关于我们</a></h2>
+					<ul class="listnone footer-ul">
+						{ms:channel typeid=53}
+						<li style="line:height:2px;">
+							<a href="[field.typelink/]">[field.typetitle/]</a>
+							&nbsp;
+						</li>
+						{/ms:channel}
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="footer-widget">
+					<h2><a href="{ms:global.url/}/106/index.html">产品中心</a></h2>
+					<ul class="listnone footer-ul">
+						{ms:channel typeid=106}
+						<li style="float: none;width: 70px;line:height:2px;">
+							<a href="[field.typelink/]">[field.typetitle/]</a>
+						</li>
+						{/ms:channel}
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="footer-widget">
+					<h2>搜索</h2>
+					<form name='search' action="#" onsubmit="search_check();" method="post" class="newsletter">
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" name="keyword" class="form-control" placeholder="请输入查询信息！">
+								<span class="input-group-btn"><button class="footer-newsletter" name='button' type="button"><i class="iconfont">&#xe70d;</i></button></span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Footer-section -->
+<!-- Tiny-footer Section -->
+<div class="tiny-footer-section" style="height:82px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-4 col-md-6">
+				<div class="tiny-footer-copyright">
+	    			<p>{ms:global.copyright/}</p> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Tiny Footer-section -->
+<!-- jquery -->
+<!-- search -->
+<div class="container-fluid">
+	<div class="modal fade bs-example-modal-lg-search" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="row">
+					<form name='search' action="#" onsubmit="search_check();" method="post">
+						<div class="col-lg-1"></div>
+						<div class="col-lg-10">
+							<div class="input-group">
+								<input type="text" name="keyword" class="form-control" placeholder="请输入查询信息！">
+								<span class="input-group-btn">
+									<button class="btn btn-default" name='button' type="button">Go!</button>
+								</span>
+							</div>
+						</div>
+						<div class="col-lg-1"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

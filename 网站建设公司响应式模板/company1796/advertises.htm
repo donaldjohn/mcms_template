@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+	{ms:include filename=headFile.htm/}
+	<body>
+		{ms:include filename=header.htm/} 
+		{ms:include filename=nav.htm/}
+		<!-- 面包屑导航开始 -->
+		<div class="container ">
+			<nav class="sub_menu">
+				<ol class="breadcrumb"><span class="glyphicon glyphicon-list"></span>
+					<li>
+						<a href="{ms:global.host/}">网站首页</a>
+					</li>
+					<li>
+						<a title="人才招聘" href="{ms:global.url/}/146/index.html">人才招聘</a>
+					</li>
+				</ol>
+			</nav>
+		</div>
+		<!--/sub_menu-->
+		<!-- 面包屑导航结束 -->
+		<!-- 中部开始 -->
+		<div class="container list-container">
+			<div class="row">
+				<div class="col-md-8">
+					<p>{ms:field.content/}</p>
+					<!-- 内容列表开始 -->
+					<!-- 内容列表结束 -->
+					<div class="blank30"></div>
+					<!-- 内容列表分页开始 -->
+					<div class="blank30"></div>
+					<nav>
+						<ul class="pagination">
+						</ul>
+					</nav>
+					<div class="blank30"></div>
+					<!-- 内容列表分页结束 -->
+				</div>
+				<div class="col-md-4">
+					<div class="content-right-list">
+
+						<h3><a>网站公告 & <small>List</small></a></h3>
+						<p></p>
+						<hr class="featurette-divider">
+						<ol>
+							<li>
+								<a href="{ms:global.url/}/146/index.html" title="人才招聘" target="_blank">人才招聘</a>
+							</li>
+						</ol>
+
+						<h3><a>相关内容 & <small>List</small></a></h3>
+						<p></p>
+						<hr class="featurette-divider">
+						<ol>
+							<li>
+								<a href="{ms:global.url/}/146/index.html" title="人才招聘" target="_blank">人才招聘</a>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+		<!-- /中部开始 -->
+		<div class="blank30"></div>
+		<!-- 页底推荐图文产品开始 -->
+		<!-- 页底推荐图文产品结束 -->
+		<div class="clearfix"></div>
+		<!--foot -->
+		{ms:include filename=footer.htm/}
+	</body>
+</html>

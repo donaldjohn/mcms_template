@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+	{ms:include filename=headFile.htm/}
+	<body>
+		{ms:include filename=header.htm/} 
+		{ms:include filename=nav.htm/}
+		<!-- 面包屑导航开始 -->
+		<div class="container ">
+			<nav class="sub_menu">
+				<ol class="breadcrumb"><span class="glyphicon glyphicon-list"></span>
+					<li>
+						<a href="{ms:global.host/}">网站首页</a>
+					</li>
+					<li>
+						<a title="客户案例" href="{ms:global.url/}/61/index.html">客户案例</a>
+					</li>
+				</ol>
+			</nav>
+		</div>
+		<!--/sub_menu-->
+		<!-- 面包屑导航结束 -->
+		<!-- 中部开始 -->
+		<div class="container list-container">
+			<div class="row">
+				<div class="col-md-12">
+					<!-- 内容列表开始 -->
+					{ms:arclist typeid=61 size=6 ispaging=true}
+					<div class="row news-list-text-pic">
+						<div class="col-md-2">
+							<a target="_blank" href="[field.link/]" class="img-auto"><img alt="[field.title/]" src="{ms:global.host/}[field.litpic/]" style="height: 140px;width: 250px;" class="img-responsive" data-src="/demo/business-template/v406/upload/images/201607/links_01.jpg" alt="[field.title/]" /></a>
+						</div>
+						<div class="col-md-10">
+							<p>2016-07-21</p>
+							<h4><a title="[field.title/]" href="[field.link/]" target="_blank">[field.title/]</a></h4>
+							<p>[field.descrip/]
+								<a href="[field.link/]" target="_blank">[了解更多]</a>
+							</p>
+						</div>
+					</div>
+					{/ms:arclist}
+					<!-- 内容列表结束 -->
+					<div class="blank30"></div>
+					<!-- 内容列表分页开始 -->
+					<div class="blank30"></div>
+					<nav>
+						<ul class="pagination">
+							<li>
+								<a href="{ms:page.pre/}" style="width: 100px;">上一页</a>
+							</li>
+							<li>
+								<a href="{ms:page.next/}" style="width: 100px;">下一页</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="blank30"></div>
+					<!-- 内容列表分页结束 -->
+				</div>
+				<!-- /col-md-12 -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+		<!-- /中部开始 -->
+		<div class="blank30"></div>
+		<!-- 页底推荐图文产品开始 -->
+		<!-- 页底推荐图文产品结束 -->
+		<div class="clearfix"></div>
+		<!--foot -->
+		{ms:include filename=footer.htm/}
+	</body>
+</html>
